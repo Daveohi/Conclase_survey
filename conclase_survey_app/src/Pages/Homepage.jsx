@@ -1,10 +1,14 @@
 // import react from 'react';
-import Logo from "../assets/Image/Conclase logo 2.png";
+import Logo from "../assets/Image/Coclase logo.png";
 import Icon from "../assets/Image/_Facebook.svg";
 import Twitter from "../assets/Image/_Twitter.png";
 import Insta from "../assets/Image/_Instagram.png";
 import Linkd from "../assets/Image/_Linkedin.png";
 import Young from "../assets/Image/bg image.png";
+import One from "../assets/Image/preview 4.png";
+import Two from "../assets/Image/preview 1.png";
+import Three from "../assets/Image/preview 2.png";
+import Four from "../assets/Image/preview 3.png";
 import "../Styles/Homepage.css";
 
 const Homepage = () => {
@@ -22,6 +26,7 @@ const Homepage = () => {
           <div className="overlap-group">
             <div className="CONCLASE-LOGO">
               {/* <img className="image" alt="Ellipse" src="../assets/Image/Ellipse 7.png" /> */}
+              <div className="ellipse"></div>
               <img className="image" alt="Image" src={Logo} />
             </div>
             <div className="oval" />
@@ -45,30 +50,52 @@ const Homepage = () => {
                   <div className="ellipse-2" />
                   <div className="ellipse-2" />
                   <div className="ellipse-2" />
-                  <img className="facebook" alt="Facebook" src={Icon} />
-                  <img className="twitter" alt="Twitter" src={Twitter} />
-                  <img className="instagram" alt="Instagram" src={Insta} />
-                  <img className="linkedin" alt="Linkedin" src={Linkd} />
+                  {/* Facbook Link*/}
+                  <a href="facebook.com" target="_blank">
+                    <img className="facebook" alt="Facebook" src={Icon} /></a>
+                  
+                  {/* Twitter Link */}
+                  <a href="twitter.com" target="_blank">
+                  <img className="twitter" alt="Twitter" src={Twitter} /></a>
+
+                  {/* Instagram Link */}
+                  <a href="instagram.com" target="_blank">
+                    <img className="instagram" alt="Instagram" src={Insta} /></a>
+                  
+                  {/* Linkedin Link */}
+                  <a href="linkedin.com" target="_blank">
+                  <img className="linkedin" alt="Linkedin" src={Linkd} 
+                   /></a>
                 </div>
               </div>
               <div className="PEOPLE">
                 <div className="overlap-group-2">
+
+                  
                   <img
                     className="element-removebg-preview"
                     alt="Element removebg preview"
-                    src="333-removebg-preview-4.png"
+                    src= { One }
                   />
-                  <img className="img" alt="Element removebg preview" src="222-removebg-preview-2.png" />
+
+
+                  <img className="img" alt="Element removebg preview" src={Two} />
+                  
+
                   <img
                     className="element-removebg-preview-2"
                     alt="Element removebg preview"
-                    src="111-removebg-preview-2.png"
+                    src= { Three}
                   />
+
+                  {/*  */}
                   <img
                     className="element-removebg-preview-3"
                     alt="Element removebg preview"
-                    src="444-removebg-preview-2.png"
+                    src= { Four}
                   />
+
+                  {/* Main Background picture */}
                   <img
                     className="medium-shot-young"
                     alt="Medium shot young"
