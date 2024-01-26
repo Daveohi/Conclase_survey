@@ -38,21 +38,26 @@
     top: 0;
 }
 
-/* .desktop .ellipse {
-    height: 332.07px;
-    margin-bottom: -21.07px;
-    margin-right: -19.26px;
-    position: relative;
-    width: 431.26px;
-} */
+.desktop .ellipse {
+    height: 585px;
+    /* margin-bottom: -21.07px; */
+    /* margin-right: -19.26px; */
+    position: fixed; top:-349.5px; left:-350px;
+    width: 700px;
+    border-radius: 349.5px;
+    box-shadow: 1.81px 3.62px 15.64px 1.81px #0000002e;
+    background: #214aa0;
+    /* border: 10px solid #214aa0; */
+    /* border-radius: 700px; */
+}
 
 .desktop .image {
-    height: 238px;
-    left: 255px;
-    /* object-fit:scale-down; */
+    height: 100px;
+    left: 360px;
+    /* object-fit: cover; */
     position: absolute;
-    top: 388px;
-    width: 362px;
+    top: 420px;
+    width: 200px;
 }
 
 .desktop .oval {
@@ -206,35 +211,35 @@
 .desktop .element-removebg-preview {
     height: 82px;
     left: 105px;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
-    top: 539px;
-    width: 100px;
+    top: 500px;
+    width: 70px;
 }
 
 .desktop .img {
-    height: 89px;
-    left: 675px;
-    object-fit: cover;
+    height: 140px;
+    left: 600px;
+    object-fit: contain;
     position: absolute;
-    top: 300px;
-    width: 195px;
+    top: 230px;
+    width: 155px;
 }
 
 .desktop .element-removebg-preview-2 {
-    height: 132px;
-    left: 310px;
+    height: 82px;
+    left: 350px;
     position: absolute;
     top: 83px;
-    width: 245px;
+    width: 145px;
 }
 
 .desktop .element-removebg-preview-3 {
-    height: 105px;
-    left: 724px;
-    object-fit: cover;
+    height: 75px;
+    left: 630px;
+    object-fit: contain;
     position: absolute;
-    top: 527px;
+    top: 450px;
     width: 97px;
 }
 
@@ -318,10 +323,10 @@
     border: 8px solid;
     border-color: #2145a0;
     height: 51px;
-    left: 1534px;
+    left: 1434px;
     opacity: 0.2;
     position: absolute;
-    top: 1307px;
+    top: 995px;
     transform: rotate(-23deg);
     width: 51px;
 }
