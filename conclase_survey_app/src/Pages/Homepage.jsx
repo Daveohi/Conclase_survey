@@ -129,7 +129,7 @@ const Homepage = () => {
             <Link className="LOGIN" to="/login">
               <button className="text-wrapper-4">Login</button>
             </Link>
-            <Link className="REGISTER" to="/registerpage">
+            <Link className="REGISTER" to="/register">
               <button className="text-wrapper-5">Register</button>
             </Link>
           </div>

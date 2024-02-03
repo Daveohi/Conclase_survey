@@ -1,0 +1,357 @@
+.desktop3 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.desktop3 .div {
+    background-color: #ffffff;
+    height: 1024px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+}
+
+.desktop3 .rectangle {
+    border: 8px solid;
+    border-color: #2145a033;
+    height: 80px;
+    left: 502px;
+    opacity: 0.2;
+    position: absolute;
+    top: 798px;
+    transform: rotate(-23deg);
+    width: 80px;
+}
+
+/* .desktop3 .rectangle-2 {
+    border: 8px solid;
+    border-color: #2145a033;
+    height: 109px;
+    left: 1361px;
+    opacity: 0.2;
+    position: absolute;
+    top: 941px;
+    transform: rotate(-23deg);
+    width: 109px;
+} */
+
+.desktop3 .oval {
+    border: 21px solid;
+    border-color: #214aa01a;
+    border-radius: 94.5px/93px;
+    height: 186px;
+    left: 1208px;
+    opacity: 0.2;
+    position: absolute;
+    top: 26px;
+    width: 189px;
+}
+
+.desktop3 .overlap-group {
+    height: 1584px;
+    left: -287px;
+    position: absolute;
+    top: -388px;
+    width: 699px;
+}
+
+.desktop3 .oval-2 {
+    border: 21px solid;
+    border-color: #214aa04c;
+    border-radius: 211.5px/208px;
+    height: 416px;
+    left: 138px;
+    opacity: 0.2;
+    position: absolute;
+    top: 1132px;
+    width: 423px;
+}
+
+.desktop3 .rectangle-2 {
+    background-color: #214aa0;
+    height: 1024px;
+    left: 287px;
+    position: absolute;
+    top: 388px;
+    width: 412px;
+}
+
+.desktop3 .CONCLASE-LOGO {
+    height: 699px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    /* width: 699px; */
+}
+
+.desktop3 .image {
+    height: 118px;
+    left: 377px;
+    object-fit: cover;
+    position: absolute;
+    top: 448px;
+    width: 212px;
+}
+
+.desktop3 .frame {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    left: 305px;
+    padding: 10px;
+    position: absolute;
+    top: 1348px;
+}
+
+.desktop3 .conclase-survey {
+    color: transparent;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 23.4px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.desktop3 .text-wrapper {
+    color: #333333;
+}
+
+.desktop3 .span {
+    color: #fdce04;
+}
+
+.desktop3 .text-wrapper-2 {
+    color: #d9b002;
+}
+
+.desktop3 .oval-3 {
+    border: 21px solid;
+    border-color: #ffffff;
+    border-radius: 203.5px/200px;
+    height: 400px;
+    left: 174px;
+    opacity: 0.2;
+    position: absolute;
+    top: 1148px;
+    width: 407px;
+}
+
+.desktop3 .oval-4 {
+    border: 21px solid;
+    border-color: #ffffff;
+    border-radius: 261.5px/257px;
+    height: 514px;
+    left: 138px;
+    opacity: 0.2;
+    position: absolute;
+    top: 1070px;
+    width: 523px;
+}
+
+.desktop3 .element-removebg {
+    height: 500px;
+    left: 692px;
+    object-fit: cover;
+    position: absolute;
+    top: 37px;
+    width: 500px;
+}
+
+.desktop3 .frame-2 {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    left: 666px;
+    padding: 10px;
+    position: absolute;
+    top: 540px;
+}
+
+.desktop3 .create-acc {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    width: 507px;
+}
+
+.desktop3 .div-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.desktop3 .text-wrapper-3 {
+    color: #214aa0;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    line-height: 36px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.desktop3 .lets-get-started {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 5px 10px;
+    position: relative;
+    width: 503px;
+
+}
+
+.desktop3 .flexcontainer {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.desktop3 .text {
+    align-self: stretch;
+    color: #00000080;
+    font-family: "Inter-Medium", "Helvetica";
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: relative;
+    text-align: center;
+
+}
+
+.desktop3 .text-wrapper-4 {
+    color: #00000080;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.desktop3 .emaiil {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: #909090;
+    border-radius: 7px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px 10px;
+    position: relative;
+    width: 532px;
+}
+
+.desktop3 .email {
+    align-self: stretch;
+    background: none;
+    border: none;
+    color: #4a4a4a;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 21px;
+    margin-top: -1px;
+    padding: 10px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.desktop3 .create-my-account {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.desktop3 .creat-my-account {
+    align-items: center;
+    background-color: #214aa0;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 8px 10px;
+    position: relative;
+    width: 419px;
+}
+
+.desktop3 .creat-my-account-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    background: #214aa0;
+    border: none;
+}
+
+.desktop3 .creat-my-account-2 {
+    color: #ffffff;
+    font-family: "Anek Tamil-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 21px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+    background: #214aa0;
+    border: none;
+}
+
+.desktop3 .arrow-back {
+    height: 39px;
+    right: 750px;
+    position: absolute;
+    top: -531px;
+    width: 39px;
+}
+
+.desktop3 .rectangle-3 {
+    border: 8px solid;
+    border-color: #2145a0;
+    height: 51px;
+    left: 1434px;
+    opacity: 0.2;
+    position: absolute;
+    top: 995px;
+    transform: rotate(-23deg);
+    width: 51px;
+}
