@@ -361,12 +361,12 @@
     position: relative;
     text-align: center;
     white-space: nowrap;
-    width: 125px;
+    width: 25px;
 } 
 
 .desktop2 .create-my-account {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 20px;
@@ -381,7 +381,7 @@
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-    padding: 8px 10px;
+    padding: 12px 10px;
     position: relative;
     width: 419px;
 }

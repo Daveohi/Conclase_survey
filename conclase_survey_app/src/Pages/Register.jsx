@@ -1,14 +1,15 @@
-import Flag from "../assets/Image/flag-nigeria.png";
-import Arrowdown from "../assets/Image/Sort Down.png";
-import Eye from "../assets/Image/crossed-eye.png";
-import "../Styles/Register.css";
-import PasswordStrengthMeter from "../Functions/password";
+// import Flag from "../assets/Image/flag-nigeria.png";
+// import Arrowdown from "../assets/Image/Sort Down.png";
+// import Eye from "../assets/Image/crossed-eye.png";
+import "../Styles/Register/Register.css";
+// import PasswordStrengthMeter from "../Component/RegisterationForm";
 import Sidebar from "../Component/Sidebar";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import RegisterForm from "../Functions/RegisterForm.jsx";
 
 const Register = () => {
-  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
 
   return (
     <div className="desktop1">
@@ -24,7 +25,8 @@ const Register = () => {
             </p>
           </div>
         </div>
-        <div className="names">
+        <RegisterForm first={firstName} last={setFirstName} />
+        {/* <div className="names">
           <div className="first-name">
             <input className="input" placeholder="First Name" type="text" />
           </div>
@@ -47,17 +49,10 @@ const Register = () => {
             placeholder="Phone number"
             type="phone number"
           />
-          {/* <div className="text-wrapper-4">
-            <img className="img" alt="Frame" src={Eye} />
-          </div> */}
         </div>
         <div className="frame-3">
           
           <PasswordStrengthMeter value={password} hook={setPassword} />
-          {/* <div className="text-wrapper-6">*****</div> */}
-          {/* <img className="img" alt="Frame" src={Eye} /> */}
-          {/* </div> */}
-          {/* </div> */}
           <div className="frame-4">
             <div className="password-strength">
               <div className="overlap-group">
@@ -102,9 +97,7 @@ const Register = () => {
               placeholder="Confirm Password"
               type="password"
             />
-            {/* <div className="text-wrapper-5">Confirm Password</div> */}
             <img className="img" alt="Frame" src={Eye} />
-            {/* </div> */}
           </div>
         </div>
         <div className="terms-and-conditions">
@@ -120,7 +113,7 @@ const Register = () => {
         <div className="create-my-account">
           <div className="creat-my-account">
             <div className="div-wrapper-2">
-              <Link className="creat-my-account-2" to="">
+              <Link className="creat-my-account-2" to="/dashboardd">
                 Register
               </Link>
             </div>
@@ -132,11 +125,11 @@ const Register = () => {
             <Link className="div-wrapper-2" to="/Login">
               <div className="text-wrapper-12">Log In</div>
             </Link>
-          </div>
+       </div> 
         </div>
+      </div> */}
       </div>
     </div>
-    // </div>
   );
 };
 

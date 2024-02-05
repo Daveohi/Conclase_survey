@@ -1,33 +1,16 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/Image/Coclase logo.png";
-import Eye from "../assets/Image/crossed-eye.png";
-import "../Styles/Login.css";
+// import Logo from "../assets/Image/Coclase logo.png";
+// import Eye from "../assets/Image/crossed-eye.png";
+import "../Styles/Login/Login.css";
 import Sidebar from "../Component/Sidebar";
+import LoginForm from "../Component/LoginForm";
+import { useState } from "react";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
   return (
     <div className="desktop2">
       <Sidebar />
-      {/* <div className="div">
-        <div className="rectangle" />
-        <div className="oval" />
-        <div className="overlap-group">
-          <div className="oval-2" />
-          <div className="rectangle-2" />
-          <div className="CONCLASE-LOGO">
-            <img className="image" alt="Image" src={Logo} />
-          </div>
-          <div className="frame">
-            <p className="conclase-survey">
-              <span className="text-wrapper">&nbsp;</span>
-              <span className="span">Conclase</span>
-              <span className="text-wrapper-2">&nbsp;</span>
-              <span className="span">Survey!</span>
-            </p>
-          </div>
-          <div className="oval-3" />
-          <div className="oval-4" />
-        </div> */}
       
         <div className="frame-2">
           <div className="create-acc">
@@ -39,8 +22,9 @@ const Login = () => {
                 Continue with Conclase Survey
               </div>
             </div>
-            <br/>
-            <div className="emaiil">
+          <br />
+          <LoginForm value={email} hook={setEmail} />
+            {/* <div className="emaiil">
               <input className="email" placeholder="Email" type="email" />
             </div>
             <br/>
@@ -51,7 +35,6 @@ const Login = () => {
                   placeholder="Enter password"
                   type="password"
                 />
-                {/* <div className="text-wrapper-5">*****</div> */}
                 <img className="img" alt="Frame" src={Eye} />
               </div>
             </div>
@@ -65,10 +48,10 @@ const Login = () => {
             </div>
             <div className="create-my-account">
               <div className="creat-my-account">
-                <div className="div-wrapper-2">
+                <Link className="div-wrapper-2" to="/dashboardd">
                   <button className="creat-my-account-2">Login</button>
-                </div>
-              </div>
+                </Link>
+              </div> */}
               <div className="already-have-account?">
                 <div className="div-wrapper-2">
                   <div className="text-wrapper-7">New to conclase survey?</div>
@@ -81,7 +64,7 @@ const Login = () => {
           </div>
           {/* <div className="rectangle-4"></div> */}
         </div>
-      </div>
+      // </div>
     // </div>
   );
 };

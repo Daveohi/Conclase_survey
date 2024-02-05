@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Styles/Register.css";
+import "../Styles/Register/Register.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const PasswordStrengthMeter = ({ value, hook }) => {
@@ -61,7 +61,7 @@ const PasswordStrengthMeter = ({ value, hook }) => {
           />
           
           <button className="toggle" type="button" onClick={togglePasswordVisibility}>
-            {showPassword ? <FaEyeSlash /> : <FaEye />}
+            {showPassword ? <FaEye /> : <FaEyeSlash />}
           </button>
       </div>
       <div>

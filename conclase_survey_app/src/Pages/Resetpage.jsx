@@ -2,7 +2,7 @@ import Logo from "../assets/Image/Coclase logo.png";
 import Arrow from "../assets/Image/arrow_back.png";
 import { Link } from "react-router-dom";
 import Reset from "../assets/Image/resetpassword.png";
-import "../Styles/Reset.css";
+import "../Styles/Reset/Reset.css";
 
 const Resetpswd = () => {
   return (

@@ -517,7 +517,7 @@
 
 .desktop1 .create-my-account {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 20px;
