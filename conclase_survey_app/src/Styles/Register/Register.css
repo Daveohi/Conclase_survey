@@ -1,20 +1,21 @@
-.desktop {
+.desktop1 {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* grid-template-columns: 25% auto; */
+    justify-content: left;
     width: 100%;
 }
 
-.desktop .div {
+.desktop1 .div {
     background-color: #ffffff;
-    height: 1024px;
+    height: fit-content;
     overflow: hidden;
     position: relative;
     width: 1440px;
 }
 
-.desktop .rectangle {
+.desktop1 .rectangle {
     border: 8px solid;
     border-color: #2145a033;
     height: 80px;
@@ -26,19 +27,7 @@
     width: 80px;
 }
 
-.desktop .rectangle-2 {
-    border: 8px solid;
-    border-color: #2145a033;
-    height: 109px;
-    left: 1361px;
-    opacity: 0.2;
-    position: absolute;
-    top: 941px;
-    transform: rotate(-23deg);
-    width: 109px;
-}
-
-.desktop .oval {
+.desktop1 .oval {
     border: 21px solid;
     border-color: #214aa01a;
     border-radius: 94.5px/93px;
@@ -50,15 +39,15 @@
     width: 189px;
 }
 
-.desktop .overlap-group {
-    height: 1584px;
+.desktop1 .overlap-group {
+    /* height: 184px; */
     left: -287px;
     position: absolute;
     top: -388px;
-    width: 699px;
+    /* width: 699px;  */
 }
 
-.desktop .oval-2 {
+.desktop1 .oval-2 {
     border: 21px solid;
     border-color: #214aa04c;
     border-radius: 211.5px/208px;
@@ -70,7 +59,16 @@
     width: 423px;
 }
 
-.desktop .rectangle-3 {
+.desktop1 .rectangle-2 {
+    background-color: #214aa0;
+    height: 1024px;
+    left: 287px;
+    /* position: absolute; */
+    top: 388px;
+    width: 412px;
+}
+
+.desktop1 .rectangle-3 {
     background-color: #214aa0;
     height: 1024px;
     left: 287px;
@@ -79,15 +77,15 @@
     width: 412px;
 }
 
-.desktop .CONCLASE-LOGO {
+.desktop1 .CONCLASE-LOGO {
     height: 699px;
     left: 0;
     position: absolute;
     top: 0;
-    width: 699px;
+    /* width: 699px; */
 }
 
-.desktop .image {
+.desktop1 .image {
     height: 118px;
     left: 377px;
     object-fit: cover;
@@ -96,7 +94,7 @@
     width: 212px;
 }
 
-.desktop .frame {
+.desktop1 .frame {
     align-items: center;
     display: inline-flex;
     gap: 10px;
@@ -107,7 +105,7 @@
     top: 1348px;
 }
 
-.desktop .conclase-survey {
+.desktop1 .conclase-survey {
     color: transparent;
     font-family: "Inter-Bold", Helvetica;
     font-size: 20px;
@@ -120,19 +118,19 @@
     width: fit-content;
 }
 
-.desktop .text-wrapper {
+.desktop1 .text-wrapper {
     color: #333333;
 }
 
-.desktop .span {
+.desktop1 .span {
     color: #fdce04;
 }
 
-.desktop .text-wrapper-2 {
+.desktop1 .text-wrapper-2 {
     color: #d9b002;
 }
 
-.desktop .oval-3 {
+.desktop1 .oval-3 {
     border: 21px solid;
     border-color: #ffffff;
     border-radius: 203.5px/200px;
@@ -144,7 +142,7 @@
     width: 407px;
 }
 
-.desktop .oval-4 {
+.desktop1 .oval-4 {
     border: 21px solid;
     border-color: #ffffff;
     border-radius: 261.5px/257px;
@@ -156,20 +154,19 @@
     width: 523px;
 }
 
-.desktop .frame-2 {
+.desktop1 .frame-2 {
     align-items: center;
     display: inline-flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     left: 629px;
-    overflow-y: scroll;
     padding: 10px;
     position: absolute;
-    top: 132px;
+    top: 152px;
 }
 
-.desktop .create-acc {
+.desktop1 .create-acc {
     align-items: center;
     display: flex;
     flex: 0 0 auto;
@@ -178,7 +175,7 @@
     width: 375px;
 }
 
-.desktop .div-wrapper {
+.desktop1 .div-wrapper {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
@@ -188,7 +185,7 @@
     position: relative;
 }
 
-.desktop .text-wrapper-3 {
+.desktop1 .text-wrapper-3 {
     color: #214aa0;
     font-family: "Inter-SemiBold", Helvetica;
     font-size: 28px;
@@ -202,7 +199,7 @@
     width: fit-content;
 }
 
-.desktop .lets-get-started {
+.desktop1 .lets-get-started {
     align-items: center;
     display: flex;
     flex: 0 0 auto;
@@ -213,7 +210,7 @@
     width: 310px;
 }
 
-.desktop .let-s-get-you {
+.desktop1 .let-s-get-you {
     color: #00000080;
     font-family: "Inter-Medium", Helvetica;
     font-size: 18px;
@@ -229,7 +226,7 @@
     width: fit-content;
 }
 
-.desktop .names {
+.desktop1 .names {
     align-items: flex-start;
     display: flex;
     flex: 0 0 auto;
@@ -238,7 +235,7 @@
     width: 535px;
 }
 
-.desktop .first-name {
+.desktop1 .first-name {
     align-items: flex-start;
     border: 1px solid;
     border-color: #909090;
@@ -255,31 +252,28 @@
     position: relative;
 }
 
-.desktop .div-wrapper-2 {
+.desktop1 .input {
     align-items: center;
+    background: none;
+    border: none;
+    color: #4a4a4a80;
     display: inline-flex;
     flex: 0 0 auto;
-    gap: 10px;
-    justify-content: center;
-    padding: 10px;
-    position: relative;
-}
-
-.desktop .text-wrapper-4 {
-    color: #4a4a4a;
     font-family: "Inter-Regular", Helvetica;
     font-size: 13px;
     font-weight: 400;
+    gap: 10px;
+    justify-content: center;
     letter-spacing: 0;
     line-height: 21px;
     margin-top: -1px;
+    padding: 10px;
     position: relative;
     text-align: center;
     white-space: nowrap;
-    width: fit-content;
 }
 
-.desktop .last-name {
+.desktop1 .last-name {
     align-items: flex-start;
     border: 1px solid;
     border-color: #909090;
@@ -295,7 +289,7 @@
     position: relative;
 }
 
-.desktop .emaiil {
+.desktop1 .emaiil {
     align-items: flex-start;
     border: 1px solid;
     border-color: #909090;
@@ -311,11 +305,11 @@
     width: 532px;
 }
 
-.desktop .email {
+.desktop1 .email {
     align-self: stretch;
     background: none;
     border: none;
-    color: #4a4a4a;
+    color: #4a4a4a80;
     font-family: "Inter-Regular", Helvetica;
     font-size: 13px;
     font-weight: 400;
@@ -329,7 +323,7 @@
     width: 100%;
 }
 
-.desktop .phone-number {
+.desktop1 .phone-number {
     align-items: center;
     border: 1px solid;
     border-color: #909090;
@@ -343,7 +337,7 @@
     width: 530px;
 }
 
-.desktop .phone-number-2 {
+.desktop1 .phone-number-2 {
     align-items: center;
     display: flex;
     flex: 1;
@@ -351,22 +345,23 @@
     gap: 10px;
     padding: 10px;
     position: relative;
+    border: none;
 }
 
-.desktop .twemoji-flag-nigeria {
+.desktop1 .twemoji-flag-nigeria {
     height: 23px;
     position: relative;
     width: 23px;
 }
 
-.desktop .sort-down {
+.desktop1 .sort-down {
     height: 17px;
     position: relative;
     width: 17px;
 }
 
-.desktop .text-wrapper-5 {
-    color: #4a4a4a;
+.desktop1 .text-wrapper-4 {
+    color: #4a4a4a80;
     font-family: "Inter-Regular", Helvetica;
     font-size: 13px;
     font-weight: 400;
@@ -378,17 +373,7 @@
     width: fit-content;
 }
 
-.desktop .frame-3 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    position: relative;
-}
-
-.desktop .password {
+.desktop1 .password {
     align-items: center;
     border: 1px solid;
     border-color: #909090;
@@ -403,22 +388,29 @@
     width: 532px;
 }
 
-.desktop .password-2 {
+.desktop1 .password-2 {
     align-items: center;
     display: flex;
     flex: 1;
     flex-grow: 1;
-    gap: 430px;
+    gap: 410px;
     justify-content: center;
     padding: 10px;
     position: relative;
+    border: none;
 }
 
-.desktop .text-wrapper-6 {
-    align-self: stretch;
-    color: #4a4a4a;
+.toggle {
+    border: none;
+    background: #ffffff;
+    /* font-size: 20px; */
+    width: 13.62px;
+    height: 12.04px;
+}
+/* .desktop1 .text-wrapper-5 {
+    color: #4a4a4a80;
     font-family: "Inter-Regular", Helvetica;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: 21px;
@@ -426,28 +418,19 @@
     position: relative;
     text-align: center;
     white-space: nowrap;
-    width: 45px;
-}
+    width: fit-content;
+} */
 
-.desktop .img {
+.desktop1 .img {
     height: 14px;
     position: relative;
     width: 14px;
 }
 
-.desktop .frame-4 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-}
-
-.desktop .confirm-password {
+.desktop1 .confirm-password {
     align-items: center;
     border: 1px solid;
-    border-color: #fa2d2d;
+    border-color: #909090;
     border-radius: 7px;
     display: flex;
     flex: 0 0 auto;
@@ -459,46 +442,19 @@
     width: 534px;
 }
 
-.desktop .confirm-password-2 {
+.desktop1 .confirm-password-2 {
     align-items: center;
     display: flex;
     flex: 1;
     flex-grow: 1;
-    gap: 389px;
+    gap: 357px;
     justify-content: center;
     padding: 10px;
     position: relative;
+    border: none;
 }
 
-.desktop .text-wrapper-7 {
-    color: #4a4a4a;
-    font-family: "Inter-Regular", Helvetica;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 21px;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.desktop .p {
-    color: #f92c2ccc;
-    font-family: "Inter-Medium", Helvetica;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 21px;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.desktop .terms-and-conditions {
+.desktop1 .terms-and-conditions {
     align-items: center;
     display: flex;
     flex: 0 0 auto;
@@ -507,7 +463,7 @@
     width: 456px;
 }
 
-.desktop .by-clicking {
+.desktop1 .by-clicking {
     align-items: center;
     align-self: stretch;
     display: flex;
@@ -519,7 +475,7 @@
     width: 100%;
 }
 
-.desktop .text-wrapper-8 {
+.desktop1 .p {
     color: #4a4a4a;
     flex: 1;
     font-family: "Anek Tamil-Regular", Helvetica;
@@ -534,7 +490,17 @@
     white-space: nowrap;
 }
 
-.desktop .text-wrapper-9 {
+.desktop1 .div-wrapper-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* .desktop1 .text-wrapper-6 {
     color: #214aa0;
     font-family: "Anek Tamil-SemiBold", Helvetica;
     font-size: 14px;
@@ -547,18 +513,18 @@
     text-align: center;
     white-space: nowrap;
     width: 125px;
-}
+} */
 
-.desktop .create-my-account {
+.desktop1 .create-my-account {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 20px;
     position: relative;
 }
 
-.desktop .creat-my-account {
+.desktop1 .creat-my-account {
     align-items: center;
     background-color: #214aa0;
     display: flex;
@@ -571,7 +537,7 @@
     width: 419px;
 }
 
-.desktop .creat-my-account-2 {
+.desktop1 .creat-my-account-2 {
     color: #ffffff;
     font-family: "Anek Tamil-Bold", Helvetica;
     font-size: 16px;
@@ -585,14 +551,14 @@
     width: fit-content;
 }
 
-.desktop .already-have-account {
+.desktop1 .already-have-account {
     align-items: flex-start;
     display: inline-flex;
     flex: 0 0 auto;
     position: relative;
 }
 
-.desktop .text-wrapper-10 {
+.desktop1 .text-wrapper-7 {
     color: #4a4a4a;
     font-family: "Anek Tamil-Medium", Helvetica;
     font-size: 14px;
@@ -606,7 +572,7 @@
     width: fit-content;
 }
 
-.desktop .text-wrapper-11 {
+.desktop1 .text-wrapper-8 {
     color: #214aa0;
     font-family: "Anek Tamil-Bold", Helvetica;
     font-size: 14px;

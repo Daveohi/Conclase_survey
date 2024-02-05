@@ -10,7 +10,8 @@ import Two from "../assets/Image/preview 1.png";
 import Three from "../assets/Image/preview 2.png";
 import Four from "../assets/Image/preview 3.png";
 import {Link} from "react-router-dom"
-import "../Styles/Homepage.css";
+import "../Styles/Homepage/Homepage.css";
+import "../Styles/Homepage/Homestyle.css";
 
 const Homepage = () => {
   return (
@@ -129,7 +130,7 @@ const Homepage = () => {
             <Link className="LOGIN" to="/login">
               <button className="text-wrapper-4">Login</button>
             </Link>
-            <Link className="REGISTER" to="/registerpage">
+            <Link className="REGISTER" to="/register">
               <button className="text-wrapper-5">Register</button>
             </Link>
           </div>
