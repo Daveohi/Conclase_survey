@@ -24,6 +24,7 @@ const Login = () => {
             </div>
           <br />
           <LoginForm value={email} hook={setEmail} />
+          <br />
             {/* <div className="emaiil">
               <input className="email" placeholder="Email" type="email" />
             </div>

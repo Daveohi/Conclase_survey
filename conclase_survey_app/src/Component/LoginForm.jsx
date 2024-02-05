@@ -1,12 +1,14 @@
 // import Logo from "../assets/Image/Coclase logo.png";
-import Eye from "../assets/Image/crossed-eye.png";
+// import Eye from "../assets/Image/crossed-eye.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../Styles/Login/Login.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const LoginForm = ({value, hook}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleEmailChange = (e) => {
@@ -15,6 +17,10 @@ const LoginForm = ({value, hook}) => {
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   const handleLogin = () => {
@@ -49,11 +55,17 @@ const LoginForm = ({value, hook}) => {
           <input
             className="confirm-password-2"
             placeholder="Enter password"
-            type="password"
+            type={showPassword ? "text" : "password"}
             value={password}
             onChange={handlePasswordChange}
           />
-          <img className="img" alt="Frame" src={Eye} />
+          <button
+            className="toggle"
+            type="button"
+            onClick={togglePasswordVisibility}
+          >
+            {showPassword ? <FaEye /> : <FaEyeSlash />}
+          </button>
         </div>
       </div>
       {errorMessage && (
@@ -65,13 +77,14 @@ const LoginForm = ({value, hook}) => {
         <Link className="div-wrapper-2" to="/Reset">
           <div className="text-wrapper-6">Forgot password?</div>
         </Link>
+        <br />
       </div>
       <div className="create-my-account">
-        <Link className="creat-my-account" to="/dashboardd">
+        <div className="creat-my-account" to="/dashboardd">
           <button className="creat-my-account-2" onClick={handleLogin}>
             Login
           </button>
-        </Link>
+        </div>
       </div>
     </div>
   );
