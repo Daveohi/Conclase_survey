@@ -1,5 +1,4 @@
-// import Logo from "../assets/Image/Coclase logo.png";
-// import Eye from "../assets/Image/crossed-eye.png";
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../Styles/Login/Login.css";

@@ -122,7 +122,7 @@ const RegisterForm = ({ first, last }) => {
           alt="Twemoji flag nigeria"
           src={Flag}
         />
-        <img className="sort-down" alt="Sort down" src={Arrowdown} />
+        <i className="bi bi-chevron-down"  />
         <input
           className="phone-number-2"
           placeholder="Phone number"
@@ -135,7 +135,27 @@ const RegisterForm = ({ first, last }) => {
       <div className="frame-3">
         <PasswordStrengthMeter value={password} hook={setPassword} />
         {/* Password strength meter can be integrated here */}
-        {/* ... */}
+        
+
+        <div className="frame-7">
+          <div className="frame-8">
+            <div className="text-wrapper-7">Must contain at least</div>
+          </div>
+          <div className="frame-4">
+            <div className="frame-9">
+              <div className="ellipse" />
+              <div className="text-wrapper-8">8 Characters</div>
+            </div>
+            <div className="frame-9">
+              <div className="ellipse" />
+              <div className="text-wrapper-8">1 Upper case character</div>
+            </div>
+            <div className="frame-9">
+              <div className="ellipse" />
+              <div className="text-wrapper-8">1 Special character</div>
+            </div>
+          </div>
+        </div>
 
         <br />
         {errorMessage && (
@@ -144,7 +164,7 @@ const RegisterForm = ({ first, last }) => {
           </div>
         )}
 
-        <br/>
+        <br />
         <div className="confirm-password">
           <input
             className="confirm-password-2"
@@ -157,7 +177,8 @@ const RegisterForm = ({ first, last }) => {
           <button
             className="toggle"
             type="button"
-            onClick={togglePasswordVisibility}>
+            onClick={togglePasswordVisibility}
+          >
             {showPassword ? <FaEye /> : <FaEyeSlash />}
           </button>
         </div>
@@ -165,7 +186,8 @@ const RegisterForm = ({ first, last }) => {
       <div className="terms-and-conditions">
         <div className="by-clicking">
           <p className="p">
-            By clicking the “Register” button, you agree to Conclase Survey
+            I confirm that I have read and accept the terms and conditions and
+            privacy policy.
           </p>
         </div>
         <div className="div-wrapper-2">
