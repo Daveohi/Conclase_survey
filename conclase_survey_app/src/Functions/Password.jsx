@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../Styles/Register/Register.css";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaMinus } from "react-icons/fa";
 
 const PasswordStrengthMeter = ({ value, hook }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -37,12 +37,12 @@ const PasswordStrengthMeter = ({ value, hook }) => {
 
     switch (strength) {
       case "strong":
-        return "Strong";
+        return <FaMinus style={{ color: "green" }}  />;
       case "medium":
-        return "Medium" ;
+        return <FaMinus style={{ color: "blue" }} />;
       case "weak":
       default:
-        return "Weak";
+        return <FaMinus style={{ color: "red" }} />;
     }
   };
 
@@ -66,6 +66,7 @@ const PasswordStrengthMeter = ({ value, hook }) => {
       </div>
       <div>
         <p>Password Strength: {getPasswordStrengthText()}</p>
+        
       </div>
     </div>
   );
