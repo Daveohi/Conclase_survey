@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/Dashboard/Desksidebar.css";
 import Logo from "../assets/Image/Coclase logo.png";
 
-const DeskSidebar = () => {
+const DashSidebar = () => {
   return (
     <div className="main-container">
       <div className="group">
@@ -41,4 +41,4 @@ const DeskSidebar = () => {
   );
 };
 
-export default DeskSidebar;
+export default DashSidebar;

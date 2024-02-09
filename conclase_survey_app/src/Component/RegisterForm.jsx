@@ -3,10 +3,10 @@ import { Link } from "react-router-dom"; // Assuming you are using React Router
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PasswordStrengthMeter from "../Functions/Password";
 import Flag from "../assets/Image/flag-nigeria.png";
-import Arrowdown from "../assets/Image/Sort Down.png";
+// import Arrowdown from "../assets/Image/Sort Down.png";
 // import "../Styles/Register/Register.css";
 
-const RegisterForm = ({ first, last }) => {
+const RegisterForm = ({ value, hook }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
