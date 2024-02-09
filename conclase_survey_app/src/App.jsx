@@ -3,7 +3,7 @@ import Homepage from "./Pages/Homepage";
 import Register from "./Pages/Register";
 import Login from './Pages/Login';
 import Reset from './Pages/Resetpage';
-import DashBoardd from './Pages/DashBoardd';
+import DashBoard from './Pages/Dashboard';
 import Surveys from './Pages/Survey';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/reset" element={<Reset />} />
-        <Route path="/dashboardd" element={<DashBoardd />} />
+        <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/surveys" element={<Surveys />} />
       </Routes>
     </BrowserRouter>

@@ -174,7 +174,7 @@
     left: 666px;
     padding: 10px;
     position: absolute;
-    top: 540px;
+    top: 520px;
 }
 
 .desktop3 .create-acc {
@@ -204,7 +204,7 @@
     font-weight: 600;
     letter-spacing: 0.35px;
     line-height: 36px;
-    margin-top: -1px;
+    margin-bottom: -10px;
     position: relative;
     text-align: center;
     white-space: nowrap;
@@ -237,7 +237,7 @@
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0;
-    line-height: 24px;
+    line-height: 4px;
     position: relative;
     text-align: center;
 
@@ -249,7 +249,7 @@
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0;
-    line-height: 24px;
+    line-height: 14px;
 }
 
 .desktop3 .emaiil {
@@ -288,11 +288,12 @@
 
 .desktop3 .create-my-account {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 20px;
     position: relative;
+    margin-top: 30px;
 }
 
 .desktop3 .creat-my-account {
