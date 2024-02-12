@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Assuming you are using React Router
+import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PasswordStrengthMeter from "../Functions/Password";
 import Flag from "../assets/Image/flag-nigeria.png";
-// import Arrowdown from "../assets/Image/Sort Down.png";
-// import "../Styles/Register/Register.css";
+
 
 const RegisterForm = ({ value, hook }) => {
   const [firstName, setFirstName] = useState("");
@@ -80,7 +79,7 @@ const RegisterForm = ({ value, hook }) => {
     });
 
     // Optionally, navigate to the dashboard
-    window.location.href = "/dashboardd"; // Change this based on your routing mechanism
+    window.location.href = "/dashboard"; // Change this based on your routing mechanism
   };
 
   return (
@@ -122,7 +121,7 @@ const RegisterForm = ({ value, hook }) => {
           alt="Twemoji flag nigeria"
           src={Flag}
         />
-        <i className="bi bi-chevron-down"  />
+        <i className="bi bi-chevron-down arrow1"  />
         <input
           className="phone-number-2"
           placeholder="Phone number"
@@ -214,7 +213,7 @@ const RegisterForm = ({ value, hook }) => {
           <div className="div-wrapper-2">
             <div className="text-wrapper-11">Already have an account?</div>
           </div>
-          <Link className="div-wrapper-2" to="/Login">
+          <Link className="div-wrapper-2" to="/login">
             <div className="text-wrapper-12">Log In</div>
           </Link>
         </div>

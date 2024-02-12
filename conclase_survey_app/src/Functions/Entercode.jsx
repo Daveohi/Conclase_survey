@@ -1,19 +1,20 @@
 import React from "react";
 import "../Styles/Reset/Reset.css";
 import "../Styles/Reset/Entercode.css";
+// import ResetPasswordForm from "./resetpasswordForm";
 
-const EnterCode = ({ title, subtitle, buttonText, onButtonClick }) => {
+const Entercode = ({ title, subtitle }) => {
   return (
     <div className="main-container2">
       <div className="lets-get-started">
         <div className="flexcontainer">
           <p className="text">
             <span className="text-wrapper-4">
-              Please enter the code sent to your email / phone number
+              Please enter the code sent to your email
             </span>
           </p>
           <p className="text">
-            <span >to reset your password</span>
+            <span>to reset your password</span>
           </p>
         </div>
       </div>
@@ -25,17 +26,14 @@ const EnterCode = ({ title, subtitle, buttonText, onButtonClick }) => {
           <span className="enter-code-1">{subtitle}</span>
         </div>
       </div>
-      <div className="frame-2box">
-        <input className="rect-angle" required/>
-        <input className="rect-angle-3" />
-        <input className="rect-angle-4" />
-        <input className="rect-angle-5" />
-        <input className="rect-angle-6" />
-      </div>
+      <ResetPasswordForm  />
+
       <div className="create-my-account1">
         <button className="creat-my-account1" onClick={onButtonClick}>
           <div className="create-my-account-7">
-            <span className="creat-my-account-8">{buttonText}Reset Password</span>
+            <span className="creat-my-account-8">
+              {buttonText}Reset Password
+            </span>
           </div>
         </button>
         <div className="already-have-account1">
@@ -51,4 +49,4 @@ const EnterCode = ({ title, subtitle, buttonText, onButtonClick }) => {
   );
 };
 
-export default EnterCode;
+export default Entercode;

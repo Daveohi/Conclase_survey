@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-// import Logo from "../assets/Image/Coclase logo.png";
-// import Eye from "../assets/Image/crossed-eye.png";
 import "../Styles/Login/Login.css";
 import Sidebar from "../Component/Sidebar";
 import LoginForm from "../Component/LoginForm";

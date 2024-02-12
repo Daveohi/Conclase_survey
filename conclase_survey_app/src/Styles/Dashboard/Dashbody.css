@@ -170,19 +170,18 @@ button {
     align-items: center;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    gap: 12px;
+    gap: 22px;
     position: relative;
     width: 148px;
     z-index: 12;
 }
 
-.bi-person-circle {
+.icon {
     flex-shrink: 0;
     position: relative;
     width: 12px;
-    height: 17px;
-    /* background: url(../assets/images/fa6279c8-5737-469d-bc6a-dda970c3f4b0.png) no-repeat center; */
-    /* background-size: contain; */
+    height: 26px;
+    font-size: 25px;
     z-index: 13;
     border-radius: 50%;
 }
