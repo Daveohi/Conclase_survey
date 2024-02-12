@@ -47,16 +47,16 @@ const Resetpswd = () => {
             src={Reset}
           />
           <div className="frame-2">
-            {/* <div className="create-acc"> */}
-              {/* <div className="div-wrapper"> */}
+            <div className="create-acc">
+              <div className="div-wrapper">
                 <div className="text-wrapper-3">Forgot password?</div>
-              {/* </div> */}
-            {/* </div> */}
+              </div>
+            </div>
             <div>
               {!showEnterCode ? ( // Display email input and send code button if EnterCode component is not shown
                 <div>
                   <div className="lets-get-started">
-                    {/* <div className="flexcontainer"> */}
+                    <div className="flexcontainer">
                       <p className="text">
                         <span className="text-wrapper-4">
                           Please enter your phone number or email, we will{" "}
@@ -67,7 +67,7 @@ const Resetpswd = () => {
                           send you a code to reset your password
                         </span>
                       </p>
-                    {/* </div> */}
+                    </div>
                   </div>
                   <div className="emaiil">
                     <input

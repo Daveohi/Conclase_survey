@@ -354,7 +354,7 @@
     width: 23px;
 }
 
-.desktop1 .bi-chevron-down {
+.desktop1 .arrow1 {
     height: 17px;
     position: relative;
     width: 17px;
@@ -407,19 +407,6 @@
     width: 13.62px;
     height: 12.04px;
 }
-/* .desktop1 .text-wrapper-5 {
-    color: #4a4a4a80;
-    font-family: "Inter-Regular", Helvetica;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 21px;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: fit-content;
-} */
 
 .desktop1 .img {
     height: 14px;

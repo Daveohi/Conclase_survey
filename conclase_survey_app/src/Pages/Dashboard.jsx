@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const DashBoard = () => {
   return (
     <div className="main-container">
-      
       <div className="oval5" />
       <div className="box">
         <div className="section">
@@ -25,7 +24,7 @@ const DashBoard = () => {
               <i className="bi bi-bell" />
             </div>
             <div className="section-3">
-              <i className="bi bi-person-circle" />
+              <div className="icon bi bi-person-circle " />
               <div className="wrapper-2">
                 <span className="text-3">John Doe</span>
                 <div className="pic-4" />
@@ -69,44 +68,38 @@ const DashBoard = () => {
             <span className="text-8">
               Looks like you don’t have any survey yet!!!
             </span>
-            <div className="section-9">
-              <Link className="wrapper-7" to="/surveys">
+            <button className="section-9">
+              <Link className="wrapper-7" to="/addfile">
                 <span className="text-9">Create New Survey</span>
               </Link>
-            </div>
+            </button>
           </div>
         </div>
         <div className="pic-7" />
       </div>
-      
+
       <div className="section-a">
         <div className="box-5">
-        
           <img className="img-3" alt="Image" src={Logo} />
         </div>
         <div className="box-6">
           <button className="wrapper-8">
-          
             <i class="bi bi-bar-chart" />
             <span className="text-a">Dashboard</span>
           </button>
           <button className="section-b">
-           
             <i class="bi bi-chat-square-text" />
             <span className="text-b">Create survey</span>
           </button>
           <button className="wrapper-9">
-         
             <i className="bi bi-chat-dots" />
             <span className="text-c">Responses</span>
           </button>
           <button className="group-5">
-           
             <i className="bi bi-gear" />
             <span className="text-d">Settings</span>
           </button>
           <button className="wrapper-a">
-          
             <i className="bi bi-box-arrow-right" />
             <span className="text-e">Logout</span>
           </button>
