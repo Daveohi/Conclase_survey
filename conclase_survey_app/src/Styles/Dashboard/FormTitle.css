@@ -1,0 +1,452 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+        "Source Han Sans CN", sans-serif;
+}
+
+.maincontainer {
+    overflow: hidden;
+    border-top: 1px solid rgba(210, 210, 210, 0.7);
+    border-bottom: 1px solid rgba(210, 210, 210, 0.7);
+}
+
+.maincontainer,
+.maincontainer * {
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+.maincontainer {
+    position: relative;
+    width: 1013px;
+    height: 541px;
+    margin: 5px auto;
+
+}
+
+.bi-grip-vertical {
+    position: relative;
+    width: 26.03px;
+    height: 25.409px;
+    margin: 0 0 0 0;
+    font-size: 30px;
+    z-index: 31;
+    overflow: hidden;
+}
+
+.flex-row-bc {
+    position: relative;
+    width: 946px;
+    height: 217px;
+    margin: -4.409px 0 0 67px;
+    z-index: 30;
+}
+
+.line {
+    position: relative;
+    width: 1px;
+    height: 19.025px;
+    margin: 31px 0 0 143px;
+    z-index: 30;
+    
+}
+
+.firstframe {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 56px;
+    position: absolute;
+    width: 946px;
+    height: 217px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.secondframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 112px;
+    position: relative;
+    width: 946px;
+    z-index: 2;
+}
+
+.thirdframe {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+    width: 591px;
+    padding: 30px 30px 30px 30px;
+    background: #f5f5f5;
+    border-top: 1px solid #d2d2d2;
+    z-index: 3;
+}
+
+.frame-button {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+    width: 111px;
+    cursor: pointer;
+    background: #214aa0;
+    border: none;
+    z-index: 4;
+}
+
+.span-input-question {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    width: 100%;
+    height: 21px;
+    background-color: #f5f0f0;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    /* white-space: nowrap; */
+    z-index: 5;
+    border: none;
+}
+
+.div-date-option {
+    flex-shrink: 0;
+    position: relative;
+    width: 233px;
+    height: 64px;
+    z-index: 6;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.div-button {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    position: absolute;
+    width: 233px;
+    height:64px;
+    top: 0;
+    left: 0;
+    padding: 8px 16px 8px 16px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 7;
+    border-radius: 8px;
+}
+
+.span-label-date {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    min-width: 0;
+    height: 21px;
+    /* color: #5433ff; */
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    /* text-overflow: ellipsis; */
+    white-space: nowrap;
+    z-index: 8;
+    overflow: hidden;
+}
+
+.div-icon {
+    flex-shrink: 0;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    z-index: 9;
+    overflow: hidden;
+}
+
+.input-date-option {
+    position: absolute;
+    width: 233px;
+    height: 64px;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+    z-index: 10;
+    outline: none;
+}
+
+.fourthframe {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    position: relative;
+    width: 946px;
+    height: 56px;
+    padding: 10px 37px 10px 37px;
+    background: #ffffff;
+    border-top: 3px solid #214aa0;
+    z-index: 11;
+    border-radius: 6px;
+    margin-top: -55px;
+}
+
+.bi-type-bold {
+    flex-shrink: 0;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    z-index: 12;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.bi-type-italic {
+    flex-shrink: 0;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 13;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.bi-type-underline {
+    flex-shrink: 0;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 14;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.bi-emoji-smile {
+    flex-shrink: 0;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 15;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.fifthframe {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 230px;
+    position: relative;
+    width: 407px;
+    height:78px;
+    padding: 30px 30px 30px 30px;
+    border-bottom: 1px solid rgba(210, 210, 210, 0.7);
+    z-index: 16;
+    margin-top: -60px;
+}
+
+.mm-dd-yyyy {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 21px;
+    color: rgba(0, 0, 0, 0.4);
+    font-family: Inter, var(--default-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 17;
+}
+
+.bi-calendar-week {
+    flex-shrink: 0;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    font-size: 25px;
+    /* background: url(../assets/images/0b29cf8d-7a2b-4377-9354-f9244132ed58.png) no-repeat center;
+    background-size: cover; */
+    z-index: 18;
+    overflow: hidden;
+}
+
+.flex-row-ae {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 373px;
+    height: 41px;
+    margin: 107px 0 0 70px;
+    z-index: 22;
+}
+
+.sixthframe {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+    width: 156px;
+    padding: 10px 10px 10px 10px;
+    z-index: 20;
+}
+
+.add-option {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 21px;
+    color: #2145a0;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 21;
+}
+
+.seventhframe {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+    width: 162px;
+    padding: 10px 10px 10px 10px;
+    z-index: 22;
+}
+
+.add-other-option {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 21px;
+    color: #2145a0;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 23;
+}
+
+.line-7 {
+    position: relative;
+    width: 836px;
+    height: 1px;
+    margin: 28px 0 0 66.876px;
+    border-top: 1px solid rgba(210, 210, 210, 0.7);
+    /* background: url(../assets/images/83172d3f-8757-41f0-9ac1-3cf6a2d7626c.png) no-repeat center; */
+    background-size: cover;
+    z-index: 24;
+}
+
+.flex-row-ff {
+    position: relative;
+    width: 239px;
+    height: 62px;
+    margin: 19px 0 0 96.876px;
+    z-index: 29;
+}
+
+.line-8 {
+    position: absolute;
+    width: 2px;
+    height: 62px;
+    top: 0;
+    left: 107px;
+    z-index: 29;
+    background-color: rgba(210, 210, 210, 0.7);
+}
+
+.add {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: 14px;
+    left: 0;
+    font-size: 40px;
+    /* font-weight: bolder; */
+    z-index: 28;
+    overflow: hidden;
+}
+
+.bi-trash3 {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: 19px;
+    left: 60px;
+    z-index: 19;
+    overflow: hidden;
+    font-size: 30px;
+        font-weight: bolder;
+    
+}
+
+.eightframe {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    position: absolute;
+    width: 110px;
+    height: 21px;
+    top: 19px;
+    left: 129px;
+    z-index: 25;
+}
+
+.required {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 15px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 26;
+}
+
+.toggle-button {
+    flex-shrink: 0;
+    position: relative;
+    width: 32px;
+    height: 16px;
+    font-size: 25px;
+    z-index: 27;
+}

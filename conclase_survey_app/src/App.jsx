@@ -3,8 +3,8 @@ import Homepage from "./Pages/Homepage";
 import Register from "./Pages/Register";
 import Login from './Pages/Login';
 import Reset from './Pages/Resetpage';
-import DashBoard from './Pages/Dashboard';
-import Surveys from './Pages/Survey';
+import DashBoard from './Pages/DashBoard';
+import Addfile from './Pages/AddFile';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/reset" element={<Reset />} />
         <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/surveys" element={<Surveys />} />
+        <Route path="/addfile" element={<Addfile />} />
       </Routes>
     </BrowserRouter>
   );

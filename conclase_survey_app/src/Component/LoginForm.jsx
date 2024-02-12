@@ -30,7 +30,7 @@ const LoginForm = ({value, hook}) => {
 
     if (email === correctEmail && password === correctPassword) {
       // Successful login - navigate to the dashboard
-      window.location.href = "/dashboardd"; // Change this based on your routing mechanism
+      window.location.href = "/dashboard"; // Change this based on your routing mechanism
     } else {
       // Incorrect credentials - display error message
       setErrorMessage("The email or password you typed is incorrect");
@@ -79,7 +79,7 @@ const LoginForm = ({value, hook}) => {
         <br />
       </div>
       <div className="create-my-account">
-        <div className="creat-my-account" to="/dashboardd">
+        <div className="creat-my-account" to="/dashboard">
           <button className="creat-my-account-2" onClick={handleLogin}>
             Login
           </button>
