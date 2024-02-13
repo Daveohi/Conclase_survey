@@ -3,8 +3,9 @@ import Homepage from "./Pages/Homepage";
 import Register from "./Pages/Register";
 import Login from './Pages/Login';
 import Reset from './Pages/Resetpage';
-import DashBoard from './Pages/DashBoard';
+import Dashboard from './Pages/Dashboard';
 import Addfile from './Pages/AddFile';
+
 
 function App() {
   return (
@@ -14,11 +15,11 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/reset" element={<Reset />} />
-        <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/addfile" element={<Addfile />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="addfile" element={<Addfile/>} />
       </Routes>
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;

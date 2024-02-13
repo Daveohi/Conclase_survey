@@ -53,7 +53,7 @@ const FormTitle = () => {
           </div>
           <div className="fifthframe">
             <span className="mm-dd-yyyy">mm/dd/yyyy</span>
-            <i className="bi bi-calendar-week" />
+            <div className="bi bi-calendar-week" />
           </div>
         </div>
       </div>

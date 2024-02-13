@@ -199,9 +199,9 @@ const Surveys = () => {
                     <div className="group-5a" />
                   </div>
                   <div className="frame-5b">
-                    <i class="bi bi-trash" />
+                    <i className="bi bi-trash" />
 
-                    <i class="bi bi-pencil" />
+                    <i className="bi bi-pencil" />
                     <i className="bi bi-three-dots-vertical" />
 
                     <div className="group-5f" />
@@ -237,13 +237,13 @@ const Surveys = () => {
         <div className="notify">
           <button className="button-component">
             {/* <div className="div-chart" /> */}
-            <i class="bi bi-bar-chart" />
+            <i className="bi bi-bar-chart" />
 
             <span className="span-dashboard">Dashboard</span>
           </button>
           <div className="div-component">
             {/* <div className="div-chat-centered-text" /> */}
-            <i class="bi bi-chat-square-text" />
+            <i className="bi bi-chat-square-text" />
             <span className="span-dashboard-66">Create survey</span>
           </div>
           <div className="div-component-67">

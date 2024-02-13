@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/Dashboard/Dashbody.css";
+import "../Styles/Dashboard/Dashboard.css";
 import Logo from "../assets/Image/Coclase logo.png";
 import Empty from "../assets/Image/No Content.png";
 import { Link } from "react-router-dom";
@@ -20,8 +20,8 @@ const DashBoard = () => {
           </div>
           <div className="section-2">
             <div className="box-3">
-              <i className="bi bi-search" />
-              <i className="bi bi-bell" />
+              <div className="bi bi-search" />
+              <div className="bi bi-bell" />
             </div>
             <div className="section-3">
               <div className="icon bi bi-person-circle " />
@@ -84,28 +84,28 @@ const DashBoard = () => {
         </div>
         <div className="box-6">
           <button className="wrapper-8">
-            <i class="bi bi-bar-chart" />
+            <div className="bi bi-bar-chart" />
             <span className="text-a">Dashboard</span>
           </button>
           <button className="section-b">
-            <i class="bi bi-chat-square-text" />
+            <div className="bi bi-chat-square-text" />
             <span className="text-b">Create survey</span>
           </button>
           <button className="wrapper-9">
-            <i className="bi bi-chat-dots" />
+            <div className="bi bi-chat-dots" />
             <span className="text-c">Responses</span>
           </button>
           <button className="group-5">
-            <i className="bi bi-gear" />
+            <div className="bi bi-gear" />
             <span className="text-d">Settings</span>
           </button>
           <button className="wrapper-a">
-            <i className="bi bi-box-arrow-right" />
+            <div className="bi bi-box-arrow-right" />
             <span className="text-e">Logout</span>
           </button>
         </div>
         <div className="wrapper-b">
-          <i className="bi bi-caret-left" />
+          <div className="bi bi-caret-left" />
         </div>
       </div>
       <div className="oval-3" />
