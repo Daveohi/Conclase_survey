@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/Dashboard/Dashbody.css";
+import "../Styles/Dashboard/Dashboard.css";
 import Logo from "../assets/Image/Coclase logo.png";
 import Empty from "../assets/Image/No Content.png";
 import { Link } from "react-router-dom";
@@ -20,8 +20,8 @@ const DashBoard = () => {
           </div>
           <div className="section-2">
             <div className="box-3">
-              <i className="bi bi-search" />
-              <i className="bi bi-bell" />
+              <div className="bi bi-search" />
+              <div className="bi bi-bell" />
             </div>
             <div className="section-3">
               <div className="icon bi bi-person-circle " />
@@ -105,7 +105,7 @@ const DashBoard = () => {
           </button>
         </div>
         <div className="wrapper-b">
-          <i className="bi bi-caret-left" />
+          <div className="bi bi-caret-left" />
         </div>
       </div>
       <div className="oval-3" />

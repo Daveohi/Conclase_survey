@@ -16,11 +16,11 @@ const DashSidebar = () => {
       </div>
       <div className="section-2">
         <button className="section-3">
-          <i class="bi bi-bar-chart" />
+          <i className="bi bi-bar-chart" />
           <span className="text">Dashboard</span>
         </button>
         <button className="group-2">
-          <i class="bi bi-chat-square-text" />
+          <i className="bi bi-chat-square-text" />
           {/* <FaInbox /> */}
           <span className="text-2">Create survey</span>
         </button>
