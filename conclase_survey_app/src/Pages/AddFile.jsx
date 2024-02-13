@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Styles/Dashboard/Addfile.css";
+import "../Styles/Dashboard/AddFile.css";
 import "../Styles/Dashboard/MenuItem.css";
 import Addfilebutton from "../Functions/Addfilebutton";
 import Logo from "../assets/Image/Coclase logo.png";
@@ -18,7 +18,7 @@ const Addfile = () => {
         <div className="header">
           <div className="elements">
             <div className="profile">
-              <div className="icon2 bi bi-person-circle" />
+              <i className="icon2 bi bi-person-circle" />
               <div className="text">
                 <span className="john-doe">John Doe</span>
                 <div className="bi bi-chevron-down arrow2" />

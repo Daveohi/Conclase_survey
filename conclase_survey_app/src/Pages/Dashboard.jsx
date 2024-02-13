@@ -84,23 +84,23 @@ const DashBoard = () => {
         </div>
         <div className="box-6">
           <button className="wrapper-8">
-            <div className="bi bi-bar-chart" />
+            <i class="bi bi-bar-chart" />
             <span className="text-a">Dashboard</span>
           </button>
           <button className="section-b">
-            <div className="bi bi-chat-square-text" />
+            <i class="bi bi-chat-square-text" />
             <span className="text-b">Create survey</span>
           </button>
           <button className="wrapper-9">
-            <div className="bi bi-chat-dots" />
+            <i className="bi bi-chat-dots" />
             <span className="text-c">Responses</span>
           </button>
           <button className="group-5">
-            <div className="bi bi-gear" />
+            <i className="bi bi-gear" />
             <span className="text-d">Settings</span>
           </button>
           <button className="wrapper-a">
-            <div className="bi bi-box-arrow-right" />
+            <i className="bi bi-box-arrow-right" />
             <span className="text-e">Logout</span>
           </button>
         </div>
