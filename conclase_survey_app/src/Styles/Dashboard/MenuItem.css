@@ -71,7 +71,7 @@ button {
     z-index: 8;
 } 
 
-.hover-state-icon {
+.toggle-state-icon {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -100,7 +100,7 @@ button {
     z-index: 5;
 }
 
-.hover-state {
+.hover-state-0 {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;

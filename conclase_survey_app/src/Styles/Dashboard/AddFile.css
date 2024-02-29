@@ -1,16 +1,13 @@
 :root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-        "Source Han Sans CN", sans-serif;
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN" sans-serif;
 }
 
-.main-container {
+.file-container {
     overflow: hidden;
 }
 
-.main-container,
-.main-container * {
+.file-container,
+.file-container * {
     box-sizing: border-box;
 }
 
@@ -21,12 +18,12 @@ button {
     outline: 0;
 }
 
-.main-container {
+.file-container {
     position: relative;
     width: 1440px;
-    height: 1024;
+    height: 1024px;
     margin: 0 auto;
-    background: #ffffff;
+    background: #eceff5;
     overflow: hidden;
 }
 
@@ -36,8 +33,6 @@ button {
     height: 268px;
     top: -6px;
     left: 1204px;
-    background: url(../assets/images/0bf032c5-cc00-4d46-a753-6bfbe5cfe061.png) no-repeat center;
-    background-size: cover;
     z-index: 31;
 }
 
@@ -144,7 +139,7 @@ button {
     z-index: 34;
 }
 
-.login {
+.filelogin {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +176,7 @@ button {
     z-index: 36;
 }
 
-.register {
+.fileregister {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,6 +189,7 @@ button {
     padding: 14px 34px 14px 34px;
     z-index: 37;
     border-radius: 6px;
+    border: none;
 }
 
 .preview {
@@ -215,7 +211,7 @@ button {
     z-index: 38;
 }
 
-.bi-three-dots-vertical {
+.dots {
     position: absolute;
     width: 24px;
     height: 14px;
@@ -381,8 +377,6 @@ button {
     position: relative;
     width: 178px;
     height: 99px;
-    background: url(../assets/images/f84a2d6181bfaa72f916333ca69efed604f56f43.png) no-repeat center;
-    background-size: cover;
     z-index: 12;
 }
 
@@ -415,8 +409,6 @@ button {
     position: relative;
     width: 24px;
     height: 24px;
-    background: url(../assets/images/2c159a29-b425-4c25-89d2-7798f3d9bdec.png) no-repeat center;
-    background-size: cover;
     z-index: 15;
     overflow: hidden;
 }
@@ -457,8 +449,6 @@ button {
     position: relative;
     width: 24px;
     height: 24px;
-    background: url(../assets/images/fca7c12d-55a4-4a69-a854-4ade0e46db82.png) no-repeat center;
-    background-size: cover;
     z-index: 18;
 }
 
@@ -494,8 +484,6 @@ button {
     position: relative;
     width: 24px;
     height: 24px;
-    background: url(../assets/images/ea9ae210-da98-484e-9dd0-591bc04c0a09.png) no-repeat center;
-    background-size: cover;
     z-index: 21;
 }
 
@@ -609,19 +597,15 @@ button {
     position: relative;
     width: 20px;
     height: 20px;
-    background: url(../assets/images/ad6e56a9-8944-4a91-8a62-c8b94b0757ae.png) no-repeat center;
-    background-size: cover;
     z-index: 30;
 }
 
-.group {
+.group3 {
     position: absolute;
     width: 502px;
     height: 493px;
     top: 747px;
     left: -225px;
-    background: url(../assets/images/91d94ee5-24ee-4be8-85d7-5a882765eda6.png) no-repeat center;
-    background-size: cover;
     z-index: 9;
 }
 
@@ -630,8 +614,6 @@ button {
     width: 386px;
     height: 379px;
     margin: 91px 0 0 34px;
-    background: url(../assets/images/c4ce9421-cad0-4bef-8ad8-79da8042532e.png) no-repeat center;
-    background-size: cover;
     z-index: 32;
 }
 
@@ -641,7 +623,9 @@ button {
     height: 493px;
     top: 0;
     left: 0;
-    background: url(../assets/images/76e95e88-8085-428b-b6f9-11d0adc0ceb0.png) no-repeat center;
-    background-size: cover;
     z-index: 33;
+}
+
+Link {
+    text-decoration: none;
 }

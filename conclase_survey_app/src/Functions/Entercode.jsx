@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/Reset/Reset.css";
 import "../Styles/Reset/Entercode.css";
-// import ResetPasswordForm from "./resetpasswordForm";
+import ResetPasswordForm from "../Component/RegisterForm";
 
 const Entercode = ({ title, subtitle }) => {
   return (
@@ -29,10 +29,10 @@ const Entercode = ({ title, subtitle }) => {
       <ResetPasswordForm  />
 
       <div className="create-my-account1">
-        <button className="creat-my-account1" onClick={onButtonClick}>
+        <button className="creat-my-account1" >
           <div className="create-my-account-7">
             <span className="creat-my-account-8">
-              {buttonText}Reset Password
+              {/* {buttonText}Reset Password */}
             </span>
           </div>
         </button>

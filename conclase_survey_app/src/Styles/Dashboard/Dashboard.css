@@ -5,12 +5,12 @@
         "Source Han Sans CN", sans-serif;
 }
 
-.main-container {
+.dash-container {
     overflow: hidden;
 }
 
-.main-container,
-.main-container * {
+.dash-container,
+.dash-container * {
     box-sizing: border-box;
 }
 
@@ -21,7 +21,7 @@ button {
     outline: 0;
 }
 
-.main-container {
+.dash-container {
     position: relative;
     width: 1440px;
     height: 1024px;
@@ -617,6 +617,13 @@ button {
     z-index: 46;
 }
 
+.active {
+    background: #052a76;
+        border-right: 3px solid #ffffff;
+        z-index: 47;
+        border: 1px solid;
+}
+
 .wrapper-8 {
     display: flex;
     align-items: center;
@@ -626,9 +633,7 @@ button {
     position: relative;
     width: 193px;
     padding: 10px 10px 10px 10px;
-    background: #052a76;
-    border-right: 3px solid #ffffff;
-    z-index: 47;
+    
 }
 
 .bi-bar-chart {
@@ -636,7 +641,6 @@ button {
     position: relative;
     width: 24px;
     height: 15px;
-    /* background: url(../assets/images/aac2da61-c1e9-45f9-bc54-d63d8814a549.png) no-repeat center; */
     background-size: cover;
     z-index: 4;
     overflow: hidden;

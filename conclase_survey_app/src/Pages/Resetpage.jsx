@@ -6,7 +6,8 @@ import "../Styles/Reset/Reset.css";
 import "../Styles/Reset/Entercode.css";
 import { useState } from "react";
 // import ResetPassword from "../Component/Resetpassword";
-import Entercode from "../Functions/Entercode";
+// import Entercode from "../Functions/Entercode";
+import ResetPasswordForm from "../Functions/ResetPasswordForm";
 
 const Resetpswd = () => {
   // const ResetPassword = () => {
@@ -91,21 +92,9 @@ const Resetpswd = () => {
                 </div>
               ) : (
                 // Display EnterCode component if EnterCode component is shown
-                <Entercode title={email} subtitle={setEmail} />
+                <ResetPasswordForm title={email} subtitle={setEmail} />
               )}
             </div>
-
-            {/* <div className="emaiil">
-              <input className="email" placeholder="Email" type="email" />
-            </div>
-
-            <div className="create-my-account">
-              <div className="creat-my-account">
-                <button className="creat-my-account-wrapper">
-                  <div className="creat-my-account-2">Send code</div>
-                </button>
-              </div>
-            </div> */}
             <Link className="arrowback" to="/login">
               <img className="arrow-back" alt="Arrow back" src={Arrow} />
             </Link>

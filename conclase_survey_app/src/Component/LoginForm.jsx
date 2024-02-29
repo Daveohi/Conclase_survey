@@ -4,25 +4,36 @@ import { useState } from "react";
 import "../Styles/Login/Login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-const LoginForm = ({value, hook}) => {
+const LoginForm = ({storedUserData}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [loginData, setLoginData] = useState({});
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+    // setEmail(e.target.value);
+    const { name, value } = e.target;
+    setLoginData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
+    // setPassword(e.target.value);
+    const { name, value } = e.target;
+    setLoginData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
     // Your authentication logic goes here
     // For simplicity, let's assume the correct credentials are hardcoded
     const correctEmail = "user@conclase.com";
@@ -35,6 +46,11 @@ const LoginForm = ({value, hook}) => {
       // Incorrect credentials - display error message
       setErrorMessage("The email or password you typed is incorrect");
     }
+
+    e.preventDefault();
+    // Check if the login data matches the stored user data
+    // Perform login authentication logic here
+    console.log("Login Data:", loginData);
   };
 
   return (
@@ -44,6 +60,7 @@ const LoginForm = ({value, hook}) => {
           className="email"
           placeholder="Email"
           type="email"
+          name="email"
           value={email}
           onChange={handleEmailChange}
         />
@@ -56,6 +73,7 @@ const LoginForm = ({value, hook}) => {
             placeholder="Enter password"
             type={showPassword ? "text" : "password"}
             value={password}
+            name="password"
             onChange={handlePasswordChange}
           />
           <button
@@ -73,7 +91,11 @@ const LoginForm = ({value, hook}) => {
         </div>
       )}
       <div className="terms-and-conditions">
-        <Link className="div-wrapper-2" to="/Reset">
+        <Link
+          style={{ textDecoration: "none" }}
+          className="div-wrapper-2"
+          to="/Reset"
+        >
           <div className="text-wrapper-6">Forgot password?</div>
         </Link>
         <br />

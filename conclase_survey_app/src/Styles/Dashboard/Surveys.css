@@ -9,8 +9,8 @@
     overflow: hidden;
 }
 
-.main-container,
-.main-container * {
+.survey-container,
+.survey-container * {
     box-sizing: border-box;
 }
 
@@ -21,7 +21,7 @@ button {
     outline: 0;
 }
 
-.main-container {
+.survey-container {
     position: relative;
     width: 1440px;
     height: 1024px;
