@@ -8,7 +8,7 @@ import DashSidebar from "../Component/DashSidebar";
 const DashBoard = () => {
   return (
     <div className="dash-container">
-      <div className="oval5" />
+      {/* <div className="oval5" /> */}
       <div className="box">
         <div className="section">
           <div className="box-2">

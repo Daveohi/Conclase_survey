@@ -9,7 +9,7 @@ const PasswordStrengthMeter = ({ value, hook }) => {
     setShowPassword(!showPassword);
   };
 
-  const handlePasswordChange = (e) => {
+  const handlePasswordChange = () => {
     hook(e.target.value);
   };
 

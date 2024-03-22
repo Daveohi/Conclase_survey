@@ -1,0 +1,205 @@
+.create-acc21 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-8xs) var(--padding-3xs);
+}
+
+.continue-with-conclase {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.lets-get-started10 {
+    width: 310px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-8xs) var(--padding-3xs);
+    box-sizing: border-box;
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-200);
+}
+
+.create-acc20 {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: var(--font-size-9xl);
+    color: var(--color-darkslateblue-100);
+}
+
+b.email8 {
+    cursor: pointer;
+}
+
+.email8 {
+    position: relative;
+    line-height: 21px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.email7 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-3xs);
+}
+
+.emaiil6 {
+    width: 532px;
+    border-radius: var(--br-6xs);
+    border: 1px solid var(--color-gray-100);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--padding-5xs) var(--padding-3xs);
+}
+
+.frame-icon16 {
+    width: 14px;
+    position: relative;
+    height: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.password19,
+.password20 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.password20 {
+    flex: 1;
+    padding: var(--padding-3xs);
+    gap: var(--gap-391xl);
+}
+
+.password19 {
+    width: 532px;
+    border-radius: var(--br-6xs);
+    border: 1px solid var(--color-gray-100);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: var(--padding-5xs) var(--padding-3xs);
+}
+
+.forgot-password1 {
+    width: 125px;
+    position: relative;
+    line-height: 21px;
+    font-weight: 600;
+    display: inline-block;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.terms-and-condition10 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+}
+
+.creat-my-account20,
+.terms-and-conditions5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terms-and-conditions5 {
+    width: 456px;
+    justify-content: flex-start;
+    font-size: var(--font-size-sm);
+    color: var(--color-red-100);
+    font-family: var(--font-anek-tamil);
+}
+
+.creat-my-account20 {
+    width: 419px;
+    background-color: var(--color-darkslateblue-100);
+    overflow: hidden;
+    justify-content: center;
+    padding: var(--padding-5xs) var(--padding-3xs);
+    box-sizing: border-box;
+}
+
+.new-to-conclase {
+    position: relative;
+    line-height: 21px;
+    font-weight: 500;
+}
+
+.login7 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    color: var(--color-darkslateblue-100);
+    cursor: pointer;
+}
+
+.already-have-account12 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: var(--font-size-sm);
+    color: var(--color-darkslategray-100);
+}
+
+.create-acc-parent5,
+.create-my-account20 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-xl);
+}
+
+.create-my-account20 {
+    justify-content: flex-start;
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    font-family: var(--font-anek-tamil);
+}
+
+.create-acc-parent5 {
+    position: absolute;
+    top: 108px;
+    left: 635px;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    text-align: center;
+    font-size: var(--font-size-smi);
+    color: var(--color-darkslategray-400);
+}
+
+.desktop-50 {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    height: 100vh;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-xl);
+    color: var(--color-gold);
+    font-family: var(--font-inter);
+}

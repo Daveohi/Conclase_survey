@@ -70,8 +70,8 @@ const RegisterForm = ({ onSignup }) => {
 
   const handleRegistration = (e) => {
     // Validate email, phone number, password, and termsAgreed
-    if (!email.endsWith("@conclase.com")) {
-      setErrorMessage('Email must end with "@conclase.com"');
+    if (!email.includes('conclase')) {
+      setErrorMessage('Email must have keyword "conclase"');
       return;
     }
 
@@ -259,7 +259,7 @@ const RegisterForm = ({ onSignup }) => {
             className="div-wrapper-2"
             to="/login"
           >
-            <div className="text-wrapper-12">Log In</div>
+            <div className="text-wrapper-8">Log In</div>
           </Link>
         </div>
       </div>

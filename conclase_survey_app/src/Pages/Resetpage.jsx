@@ -50,7 +50,8 @@ const Resetpswd = () => {
           <div className="frame-2">
             <div className="create-acc">
               <div className="div-wrapper">
-                <div className="text-wrapper-3">Forgot password?</div>
+                <div className="text-wrapper-3">For
+                got password?</div>
               </div>
             </div>
             <div>
@@ -58,12 +59,13 @@ const Resetpswd = () => {
                 <div>
                   <div className="lets-get-started">
                     <div className="flexcontainer">
-                      <p className="text">
+                      <p className="textemail">
                         <span className="text-wrapper-4">
-                          Please enter your phone number or email, we will{" "}
+                          Please enter your email, we will{" "}
                         </span>
                       </p>
-                      <p className="text">
+                      <br/>
+                      <p className="textemail">
                         <span className="text-wrapper-4">
                           send you a code to reset your password
                         </span>
