@@ -4,12 +4,6 @@ const { Users } = require("../models");
 const { sign } = require("jsonwebtoken");
 const errorHandler = require("../middlewares/error")
 
-//testing
-
-const test = async(req,res) => {
-  res.send("Just testing")
-}
-
 
 // Register function
 const register = async (req, res , next) => {
@@ -30,7 +24,7 @@ const register = async (req, res , next) => {
   res.send("register successfully");
     
   } catch (error) {
-    next(error); //middleware from index.js
+    next(error);
   }
   
 }
@@ -78,7 +72,7 @@ const login = async (req, res, next) => {
   }
 };
 
-module.exports = { test ,login, register };     
+module.exports = { login, register };     
 
 // "email": "johndoe@conclase.com",
 // "password": "secretpassword"
