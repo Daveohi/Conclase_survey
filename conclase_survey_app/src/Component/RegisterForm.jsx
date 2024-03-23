@@ -70,7 +70,6 @@ const RegisterForm =  ({ value, hook }) => {
       return;
     }
 
-    // Prepare data for registration
     const data = {
       firstname: firstName,
       lastname: lastName,
@@ -78,8 +77,6 @@ const RegisterForm =  ({ value, hook }) => {
       phoneNumber: phoneNumber,
       password: password,
     };
-
-    // Registration logic goes here (you can navigate to the dashboard or send data to the server)
 
     try {
 
