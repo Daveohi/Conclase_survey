@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PasswordStrengthMeter from "../Functions/Password";
 import Flag from "../assets/Image/flag-nigeria.png";
+import axios from "axios";
 
 
-const RegisterForm = ({ value, hook }) => {
+const RegisterForm =  ({ value, hook }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,6 +16,8 @@ const RegisterForm = ({ value, hook }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [termsAgreed, setTermsAgreed] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -40,7 +43,7 @@ const RegisterForm = ({ value, hook }) => {
     setTermsAgreed(!termsAgreed);
   };
 
-  const handleRegistration = () => {
+  const handleRegistration = async () => {
     // Validate email, phone number, password, and termsAgreed
     if (!email.endsWith("@conclase.com")) {
       setErrorMessage('Email must end with "@conclase.com"');
@@ -67,19 +70,27 @@ const RegisterForm = ({ value, hook }) => {
       return;
     }
 
-    // Registration logic goes here (you can navigate to the dashboard or send data to the server)
-    // For simplicity, let's log the user details to the console
-    console.log("Registration successful:", {
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      password,
-      confirmPassword,
-    });
+    // Prepare data for registration
+    const data = {
+      firstname: firstName,
+      lastname: lastName,
+      email: email,
+      phoneNumber: phoneNumber,
+      password: password,
+    };
 
-    // Optionally, navigate to the dashboard
-    window.location.href = "/dashboard"; // Change this based on your routing mechanism
+    // Registration logic goes here (you can navigate to the dashboard or send data to the server)
+
+    try {
+
+      const response = await axios.post("http://localhost:4005/auth/register", data);
+      console.log(response);
+      console.log("Registration successful:", response.data);
+      navigate('/login'); // Navigate to login after successful registration
+    } catch (error) {
+      console.error("Error registering user:", error.message);
+      setErrorMessage("Error registering user. Please try again later.");
+    }
   };
 
   return (

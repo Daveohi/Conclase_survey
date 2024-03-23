@@ -1,14 +1,17 @@
 
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import { useState } from "react";
 import "../Styles/Login/Login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import axios from "axios";
 
 const LoginForm = ({value, hook}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  const navigate = useNavigate()
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -22,18 +25,23 @@ const LoginForm = ({value, hook}) => {
     setShowPassword(!showPassword);
   };
 
-  const handleLogin = () => {
-    // Your authentication logic goes here
-    // For simplicity, let's assume the correct credentials are hardcoded
-    const correctEmail = "user@conclase.com";
-    const correctPassword = "password";
+  const data = {
+    email: email,
+    password: password,
+  };
 
-    if (email === correctEmail && password === correctPassword) {
-      // Successful login - navigate to the dashboard
-      window.location.href = "/dashboard"; // Change this based on your routing mechanism
-    } else {
-      // Incorrect credentials - display error message
-      setErrorMessage("The email or password you typed is incorrect");
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post("http://localhost:4005/auth/login", data);
+      if (response.data.error) {
+        alert(response.data.error);
+      } else {
+        localStorage.setItem("accessToken", response.data);
+        navigate("/dashboard");
+      }
+    } catch (error) {
+      console.error("Error logging in:", error.message);
+      alert("An error occurred while logging in");
     }
   };
 
