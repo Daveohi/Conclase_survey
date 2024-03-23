@@ -41,7 +41,7 @@ const LoginForm = ({value, hook}) => {
       }
     } catch (error) {
       console.error("Error logging in:", error.message);
-      alert("An error occurred while logging in");
+      setErrorMessage("An error occurred while logging in");
     }
   };
 
