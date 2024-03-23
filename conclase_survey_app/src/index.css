@@ -3,10 +3,10 @@
   src: url("./assets/fonts/Inter.ttf");
 }
 
-/* @font-face { 
-  font-family: Nunito;
-  src: url("./assets/fonts/Inter.ttf");
-}*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+
 
 * {
   margin: 0;
@@ -16,6 +16,65 @@
 
 body {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   overflow-x: hidden;
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-raleway: Raleway;
+  --font-inter: Inter;
+  --font-anek-tamil: "Anek Tamil";
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-13xl: 32px;
+  --font-size-xl: 20px;
+  --font-size-smi: 13px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+  --font-size-9xl: 28px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-darkslateblue-100: #214aa0;
+  --color-darkslateblue-200: rgba(33, 74, 160, 0.1);
+  --color-darkslateblue-300: rgba(33, 74, 160, 0.3);
+  --color-darkslateblue-400: rgba(33, 69, 160, 0.2);
+  --color-darkslategray-100: #4a4a4a;
+  --color-darkslategray-200: #333;
+  --dark-blue: #132f41;
+  --color-darkslategray-300: rgba(74, 74, 74, 0.8);
+  --color-darkslategray-400: rgba(74, 74, 74, 0.5);
+  --color-gray-100: #909090;
+  --color-gray-200: rgba(0, 0, 0, 0.5);
+  --color-gold: #fdce04;
+  --color-goldenrod: #dab102;
+  --color-aliceblue-100: #f0f5ff;
+  --color-aliceblue-200: #eaeff5;
+  --color-red-100: #fa2d2d;
+  --color-red-200: rgba(250, 45, 45, 0.8);
+  --color-darkgray: #a6a5a5;
+
+  /* Gaps */
+  --gap-xl: 20px;
+  --gap-370xl: 389px;
+  --gap-361xl: 380px;
+  --gap-3xs: 10px;
+  --gap-338xl: 357px;
+  --gap-mini: 15px;
+  --gap-44xl: 63px;
+  --gap-411xl: 430px;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+  --padding-5xs: 8px;
+  --padding-8xs: 5px;
+
+  /* Border radiuses */
+  --br-6xs: 7px;
+  --br-xs: 12px;
 }

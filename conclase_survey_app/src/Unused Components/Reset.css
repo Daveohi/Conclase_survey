@@ -1,4 +1,4 @@
-.desktop3 {
+/* .desktop3 {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
@@ -25,18 +25,6 @@
     transform: rotate(-23deg);
     width: 80px;
 }
-
-/* .desktop3 .rectangle-2 {
-    border: 8px solid;
-    border-color: #2145a033;
-    height: 109px;
-    left: 1361px;
-    opacity: 0.2;
-    position: absolute;
-    top: 941px;
-    transform: rotate(-23deg);
-    width: 109px;
-} */
 
 .desktop3 .oval {
     border: 21px solid;
@@ -84,7 +72,6 @@
     left: 0;
     position: absolute;
     top: 0;
-    /* width: 699px; */
 }
 
 .desktop3 .image {
@@ -230,7 +217,7 @@
     gap: 9px;
 }
 
-.desktop3 .text {
+.desktop3 .textemail {
     align-self: stretch;
     color: #00000080;
     font-family: "Inter-Medium", "Helvetica";
@@ -355,4 +342,4 @@
     top: 995px;
     transform: rotate(-23deg);
     width: 51px;
-}
+} */

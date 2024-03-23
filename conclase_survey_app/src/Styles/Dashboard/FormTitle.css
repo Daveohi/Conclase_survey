@@ -5,14 +5,14 @@
         "Source Han Sans CN", sans-serif;
 }
 
-.maincontainer {
+.formcontainer {
     overflow: hidden;
     border-top: 1px solid rgba(210, 210, 210, 0.7);
     border-bottom: 1px solid rgba(210, 210, 210, 0.7);
 }
 
-.maincontainer,
-.maincontainer * {
+.formcontainer,
+.formcontainer * {
     box-sizing: border-box;
 }
 
@@ -23,7 +23,7 @@ button {
     outline: 0;
 }
 
-.maincontainer {
+.formcontainer {
     position: relative;
     width: 1013px;
     height: 541px;

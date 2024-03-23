@@ -1,18 +1,36 @@
 import React, { useState } from "react";
-import "../Styles/Dashboard/AddFile.css";
+
 import "../Styles/Dashboard/MenuItem.css";
 import Addfilebutton from "../Functions/Addfilebutton";
 import Logo from "../assets/Image/Coclase logo.png";
+import FixDeadline from "../Component/FixDeadline";
+import { Link } from "react-router-dom";
+// import FixDate from "../Component/FixDate";
+import "../Styles/Dashboard/Addfile.css";
+import DashSidebar from "../Component/DashSidebar";
 
 const Addfile = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+  // const [secondModal, setSecondModal] = useState(false);
 
   const handleDropdownToggle = () => {
     setDropdownVisible(!dropdownVisible); // Toggle the visibility of the dropdown
   };
 
+  const handlePublishClick = () => {
+    setModalVisible(true); // Show the modal when "Publish" button is clicked
+  };
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
+  // const handleFixDateClick = () => {
+  //   // setSecondModal(false);
+  // };
+
   return (
-    <div className="main-container">
+    <div className="file-container">
       <div className="oval" />
       <div className="body">
         <div className="header">
@@ -27,15 +45,21 @@ const Addfile = () => {
           </div>
         </div>
         <div className="frm1">
-          <button className="login">
+          <button className="filelogin" onClick={handlePublishClick}>
             <span className="publish">Publish</span>
           </button>
-          <div className="register">
+          {modalVisible && <FixDeadline onClose={handleCloseModal} />}
+
+          <Link
+            style={{ textDecoration: "none" }}
+            className="fileregister"
+            to="/formpage"
+          >
             <span className="preview">Preview</span>
-          </div>
+          </Link>
 
           <div
-            className="bi bi-three-dots-vertical"
+            className="bi bi-three-dots-vertical dots"
             onClick={handleDropdownToggle}
           >
             {/* Three vertical dots icon */}
@@ -47,10 +71,10 @@ const Addfile = () => {
                 <option className="oneresponse">Limit to one response</option>
                 <div className="bi bi-toggle-off toggle-button " />
               </div>
-              <div className="hover-state-icon">
+              <div className="toggle-state-icon">
                 <option className="fix-deadline">Fix deadline</option>
               </div>
-              <div className="hover-state">
+              <div className="hover-state-0">
                 <option className="delete-survey">Delete survey</option>
               </div>
               <div className="hover-state-1">
@@ -70,41 +94,8 @@ const Addfile = () => {
           <Addfilebutton />
         </div>
       </div>
-      <div className="sidebars">
-        <div className="frm4">
-          {/* <div className="image" /> */}
-          <img className="img-3" alt="Image" src={Logo} />
-        </div>
-        <div className="frm5">
-          <div className="component">
-            <div className="chart" />
-            <span className="dashboard">Dashboard</span>
-          </div>
-          <button className="component-button">
-            <div className="chat-centered-text" />
-            <span className="dashboard-create-survey">Create survey</span>
-          </button>
-          <div className="component-div">
-            <div className="chat-teardrop-dots" />
-            <span className="dashboard-responses">Responses</span>
-          </div>
-          <div className="component-div-6">
-            <div className="gear-six" />
-            <span className="dashboard-settings">Settings</span>
-          </div>
-          <div className="component-7">
-            <div className="sign-out" />
-            <span className="dashboard-8">Logout</span>
-          </div>
-        </div>
-        <div className="frm6">
-          <div className="caret-left" />
-        </div>
-      </div>
-      <div className="group">
-        <div className="oval-a" />
-        <div className="oval-b" />
-      </div>
+
+      <DashSidebar />
     </div>
   );
 };

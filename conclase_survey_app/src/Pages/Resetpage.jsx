@@ -6,7 +6,8 @@ import "../Styles/Reset/Reset.css";
 import "../Styles/Reset/Entercode.css";
 import { useState } from "react";
 // import ResetPassword from "../Component/Resetpassword";
-import Entercode from "../Functions/Entercode";
+// import Entercode from "../Functions/Entercode";
+import ResetPasswordForm from "../Functions/ResetPasswordForm";
 
 const Resetpswd = () => {
   // const ResetPassword = () => {
@@ -49,7 +50,8 @@ const Resetpswd = () => {
           <div className="frame-2">
             <div className="create-acc">
               <div className="div-wrapper">
-                <div className="text-wrapper-3">Forgot password?</div>
+                <div className="text-wrapper-3">For
+                got password?</div>
               </div>
             </div>
             <div>
@@ -57,12 +59,13 @@ const Resetpswd = () => {
                 <div>
                   <div className="lets-get-started">
                     <div className="flexcontainer">
-                      <p className="text">
+                      <p className="textemail">
                         <span className="text-wrapper-4">
-                          Please enter your phone number or email, we will{" "}
+                          Please enter your email, we will{" "}
                         </span>
                       </p>
-                      <p className="text">
+                      <br/>
+                      <p className="textemail">
                         <span className="text-wrapper-4">
                           send you a code to reset your password
                         </span>
@@ -91,21 +94,9 @@ const Resetpswd = () => {
                 </div>
               ) : (
                 // Display EnterCode component if EnterCode component is shown
-                <Entercode title={email} subtitle={setEmail} />
+                <ResetPasswordForm title={email} subtitle={setEmail} />
               )}
             </div>
-
-            {/* <div className="emaiil">
-              <input className="email" placeholder="Email" type="email" />
-            </div>
-
-            <div className="create-my-account">
-              <div className="creat-my-account">
-                <button className="creat-my-account-wrapper">
-                  <div className="creat-my-account-2">Send code</div>
-                </button>
-              </div>
-            </div> */}
             <Link className="arrowback" to="/login">
               <img className="arrow-back" alt="Arrow back" src={Arrow} />
             </Link>

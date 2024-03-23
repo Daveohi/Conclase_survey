@@ -1,13 +1,14 @@
 import React from "react";
 import "../Styles/Dashboard/Dashboard.css";
-import Logo from "../assets/Image/Coclase logo.png";
+// import Logo from "../assets/Image/Coclase logo.png";
 import Empty from "../assets/Image/No Content.png";
 import { Link } from "react-router-dom";
+import DashSidebar from "../Component/DashSidebar";
 
 const DashBoard = () => {
   return (
-    <div className="main-container">
-      <div className="oval5" />
+    <div className="dash-container">
+      {/* <div className="oval5" /> */}
       <div className="box">
         <div className="section">
           <div className="box-2">
@@ -69,7 +70,11 @@ const DashBoard = () => {
               Looks like you don’t have any survey yet!!!
             </span>
             <button className="section-9">
-              <Link className="wrapper-7" to="/addfile">
+              <Link
+                style={{ textDecoration: "none" }}
+                className="wrapper-7"
+                to="/addfile"
+              >
                 <span className="text-9">Create New Survey</span>
               </Link>
             </button>
@@ -78,39 +83,7 @@ const DashBoard = () => {
         <div className="pic-7" />
       </div>
 
-      <div className="section-a">
-        <div className="box-5">
-          <img className="img-3" alt="Image" src={Logo} />
-        </div>
-        <div className="box-6">
-          <button className="wrapper-8">
-            <i class="bi bi-bar-chart" />
-            <span className="text-a">Dashboard</span>
-          </button>
-          <button className="section-b">
-            <i class="bi bi-chat-square-text" />
-            <span className="text-b">Create survey</span>
-          </button>
-          <button className="wrapper-9">
-            <i className="bi bi-chat-dots" />
-            <span className="text-c">Responses</span>
-          </button>
-          <button className="group-5">
-            <i className="bi bi-gear" />
-            <span className="text-d">Settings</span>
-          </button>
-          <button className="wrapper-a">
-            <i className="bi bi-box-arrow-right" />
-            <span className="text-e">Logout</span>
-          </button>
-        </div>
-        <div className="wrapper-b">
-          <div className="bi bi-caret-left" />
-        </div>
-      </div>
-      <div className="oval-3" />
-      <div className="oval-4" />
-      <div className="img-9" />
+      <DashSidebar />
     </div>
   );
 }
