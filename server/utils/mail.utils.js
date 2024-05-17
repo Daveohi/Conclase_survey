@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 
 
 const transporter = nodemailer.createTransport({
-  host: "sandbox.smtp.mailtrap.io",
+  host: "sandbox.smtp.mailtrap.io",  // need to create your own mail host , used my own mailstrap account
   port: 2525,
   auth: {
     user: process.env.MAIL_USER,
@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
 exports.forgotPasswordMail = async (userEmail, host, token) => {
     try {
         const mailOptions = {
-            from: 'conclasesurvey@gmail.com',
+            from: 'conclasesurvey.app@gmail.com', // need a different mail address
             to: userEmail,
             subject: 'Password Reset',
             text: `You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\n`
@@ -37,7 +37,7 @@ exports.forgotPasswordMail = async (userEmail, host, token) => {
 exports.sendConfirmationEmail = async (userEmail, host, confirmationToken) => {
     try {
         const mailOptions = {
-            from: "agriswift.app@gmail.com",
+            from: "conclasesurvey.app@gmail.com",
             to: userEmail,
             subject: "Confirm Your Account",
             html: `
