@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false })); //
 app.use(cookieParser()); // allows you access cookies and its contents
 app.use(cors({
   origin: 'http://localhost:5173', // Allow requests from this origin
-  methods: ['GET', 'POST'], // Allow only specified HTTP methods
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only specified HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],
 }))
 dotenv.config();
@@ -17,14 +17,14 @@ dotenv.config();
 const db = require("./models");
 
 //routers
-const userRouter = require("./routes/UserAuth.route")
-const userRouter2 = require("./routes/User.route")
+const authRouter = require("./routes/UserAuth.route")
+const userRouter = require("./routes/User.route")
 
 
 
 //endpoint routes
-app.use("/auth", userRouter)
-app.use("/users", userRouter2)
+app.use("/auth", authRouter)
+app.use("/users", userRouter)
 
 
 //middleware to handle errors

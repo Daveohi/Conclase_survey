@@ -3,9 +3,11 @@ const express = require('express');
 const verifyToken = require('../middlewares/verifyToken');
 const { updateUser, getUser } = require('../controllers/User.controller.js');
 
-const routerManager2 = express.Router();
+const routerManager = express.Router();
 
-routerManager2.post('/update/:id', verifyToken, updateUser)
-routerManager2.get('/:id', verifyToken, getUser)
+routerManager.get('/:id', verifyToken, getUser)
+routerManager.put('/:id', verifyToken, updateUser)
+routerManager.delete('/:id', verifyToken, )
 
-module.exports = routerManager2;
+
+module.exports = routerManager;
