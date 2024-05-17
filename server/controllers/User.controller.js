@@ -3,6 +3,20 @@ const bcrypt = require("bcrypt");
 const { Users } = require("../models"); //destructure the table name from the model
 const errorHandler = require("../middlewares/error")
 
+const getUser = async (req, res, next) => {
+  try {
+    const user = await Users.findOne({ where: { id: req.params.id } });
+  
+    if (!user) return next(errorHandler(404, 'User not found!'));
+  
+    const { password: pass, ...rest } = user._previousDataValues;
+  
+    res.status(200).json(rest);
+  } catch (error) {
+    next(error);
+  }
+};
+
 const  updateUser = async (req, res, next) => {
   //res.send('hello world')
   try {
@@ -42,4 +56,4 @@ const  updateUser = async (req, res, next) => {
 }
 
 
-module.exports = {updateUser}
+module.exports = {updateUser, getUser}
