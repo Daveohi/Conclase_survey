@@ -1,10 +1,49 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "../Styles/Dashboard/Dashboard.css";
 import Logo from "../assets/Image/Coclase logo.png";
 import Empty from "../assets/Image/No Content.png";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
 const DashBoard = () => {
+
+   //logout
+   const logout = async () => {
+    try {
+      // Send a request to the logout API endpoint
+      await axios.post("http://localhost:4005/auth/logout", { userId: sessionStorage.getItem('id') });
+      // Clear session storage
+      sessionStorage.clear();
+      // Redirect to the login page
+      window.location.href = "/login";
+    } catch (error) {
+      console.error("Error logging out:", error.message);
+    }
+  };
+
+//set username dynamically
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    fetchUserName();
+  }, []);
+
+  const id = sessionStorage.getItem("id");
+
+  const fetchUserName = async () => {
+    try {
+      // Send a request to the user profile API endpoint
+      const response = await axios.get(`http://localhost:4005/users/${id}`);
+      // Extract the user name from the response data
+      const { firstName, lastName } = response.data.result; // Corrected access to response data
+      // Update the userName state
+      setUserName(`${firstName} ${lastName}`);
+    } catch (error) {
+      console.error("Error fetching user name:", error.message);
+    }
+  };
+
+
   return (
     <div className="main-container">
       <div className="oval5" />
@@ -12,7 +51,7 @@ const DashBoard = () => {
         <div className="section">
           <div className="box-2">
             <div className="wrapper">
-              <span className="text">Welcome, John</span>
+              <span className="text">Welcome, {userName}</span>
               <span className="text-2">
                 To begin please create a new survey
               </span>
@@ -99,7 +138,7 @@ const DashBoard = () => {
             <i className="bi bi-gear" />
             <span className="text-d">Settings</span>
           </button>
-          <button className="wrapper-a">
+          <button className="wrapper-a" onClick={logout}>
             <i className="bi bi-box-arrow-right" />
             <span className="text-e">Logout</span>
           </button>

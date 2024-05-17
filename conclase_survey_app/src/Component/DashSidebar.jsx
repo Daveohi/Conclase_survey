@@ -1,8 +1,25 @@
 import React from "react";
 import "../Styles/Dashboard/Desksidebar.css";
 import Logo from "../assets/Image/Coclase logo.png";
+import axios from "axios";
 
 const DashSidebar = () => {
+
+  //logout
+  const logout = async () => {
+    try {
+      // Send a request to the logout API endpoint
+      await axios.post("http://localhost:4005/auth/logout", { userId: sessionStorage.getItem('id') });
+      // Clear session storage
+      sessionStorage.clear();
+      // Redirect to the login page
+      window.location.href = "/login";
+    } catch (error) {
+      console.error("Error logging out:", error.message);
+    }
+  };
+  
+
   return (
     <div className="main-container">
       <div className="group">
@@ -32,7 +49,7 @@ const DashSidebar = () => {
           <i className="bi bi-gear" />
           <span className="text-4">Settings</span>
         </button>
-        <button className="section-5">
+        <button className="section-5" onClick={logout}>
           <i className="bi bi-box-arrow-right" />
           <span className="text-5">Logout</span>
         </button>
