@@ -10,8 +10,9 @@ const errorHandler = require("../middlewares/error")
 const register = async (req, res , next) => {
  
   try {
-    const { firstname, lastname, email, phoneNumber, password, comfirmPassword } = req.body;
+    const { firstname, lastname, email, phoneNumber, password, confirmPassword } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10)
+    const hashedPassword2 = await bcrypt.hash(confirmPassword, 10)
 
      // Generate unique token for password reset using crypto
      const confirmationToken = crypto.randomBytes(20).toString("hex");
@@ -20,19 +21,22 @@ const register = async (req, res , next) => {
      // Set the expiry time for the reset token (e.g., 1 hour from now)
      const confirmationTokenExpire = new Date(Date.now() + 3600000); // 1 hour
  
-    await Users.create({
+    const user = await Users.create({
       firstname,
       lastname,
       email,
       phoneNumber,
       password: hashedPassword,
-      comfirmPassword,
+      confirmPassword: hashedPassword2,
       token: confirmationToken,
       tokenExpire: confirmationTokenExpire
     });
 
-    
-  res.send(" Welcome register successfully");
+    res.status(200).json({
+      success: true,
+      result: user,
+  });
+  //res.send(" Welcome register successfully");
     
   } catch (error) {
     next(error);
@@ -67,7 +71,7 @@ const login = async (req, res, next) => {
         process.env.JWT_TOKEN
       ); //using the id of the user to generate web token
 
-      const { password: pass, comfirmPassword: comfirm, ...restInfo } = userQuery._previousDataValues;
+      const { password: pass, confirmPassword: confirm, ...restInfo } = userQuery._previousDataValues;
 
       // Set the access token as a cookie
       res
@@ -77,7 +81,7 @@ const login = async (req, res, next) => {
         })
         .status(200)
         .json({
-          data: restInfo,
+          result: restInfo,
           success: true,
           //token: accessToken // token already saved in cookie just for testing
 
@@ -128,7 +132,7 @@ const forgotPassword = async (req, res, next) => {
    //
    res.status(200).json({
     success: true,
-    data: userPass,
+    result: userPass,
     message: "Password reset email sent successfully"
 });
 
