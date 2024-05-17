@@ -70,19 +70,31 @@ const RegisterForm =  ({ value, hook }) => {
       return;
     }
 
+    const headers = {
+      'Content-Type': 'application/json',
+    };
+
     const data = {
       firstname: firstName,
       lastname: lastName,
       email: email,
       phoneNumber: phoneNumber,
       password: password,
+      confirmPassword: confirmPassword 
     };
 
     try {
-
-      const response = await axios.post("http://localhost:4005/auth/register", data);
-      console.log(response);
-      console.log("Registration successful:", response.data);
+      const response = await axios.post("http://localhost:4005/auth/register", JSON.stringify(data), {headers});
+      //console.log(response);
+      console.log("Registration successful:", response.data.result);
+      if(response.data.success === true){
+        console.log(response.data.result);
+        //save users data to session
+        sessionStorage.setItem('firstname', response.data.result.firstName); 
+        sessionStorage.setItem('lastname', response.data.result.lastName);
+        sessionStorage.setItem('phoneNumber', response.data.result.phoneNumber);
+        sessionStorage.setItem('id', response.data.result.userId);
+      }
       navigate('/login'); // Navigate to login after successful registration
     } catch (error) {
       console.error("Error registering user:", error.message);
