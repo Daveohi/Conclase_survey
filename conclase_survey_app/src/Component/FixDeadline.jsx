@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
-import "../Styles/Dashboard/FixDeadline.css";
+import React from "react";
+import "../Styles/Modals/FixDeadline.css";
 import Rafiki from "../assets/Image/rafiki.png";
 // import FixDate from "../Component/FixDate";
 
 const FixDeadline = ({ onClose, onClickFix }) => {
-  // const [secondModal, setSecondModal] = useState(false);
 
-  // const handleFixDateClick = () => {
-  //   setSecondModal(true); // Show the modal when "Publish" button is clicked
-  // };
-  // const handleCloseModal = () => {
-  //   setModalVisible(false);
-  // };
   return (
     <div className="modal1">
       <div className="pop-up-deadline">
@@ -34,10 +27,9 @@ const FixDeadline = ({ onClose, onClickFix }) => {
             Fix Deadline
           </button>
         </div>
-        {/* {secondModal && <FixDate />} */}
       </div>
     </div>
   );
-}
+};
 
 export default FixDeadline;

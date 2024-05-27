@@ -4,6 +4,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import SideNav from "../Component/SideNav";
 import RESET from "../assets/Image/resetpassword.png";
 import Desktop3 from "../Component/Desktop3";
+// import Desktop2 from "../Component/Desktop2";
 import { Link } from "react-router-dom";
 
 const Desktop1 = () => {
