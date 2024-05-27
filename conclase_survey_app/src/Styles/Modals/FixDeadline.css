@@ -143,8 +143,9 @@ button {
     padding: 14px 11px 14px 11px;
     background: #214aa0;
     border: 1px solid #ffffff;
-    z-index: 3;
+    /* z-index: 3; */
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .fix-deadline {
@@ -161,5 +162,5 @@ button {
     white-space: nowrap;
     background: transparent;
     border: none;
-    z-index: 4;
+    z-index: 36;
 }
