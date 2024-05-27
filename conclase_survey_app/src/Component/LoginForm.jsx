@@ -25,6 +25,9 @@ const LoginForm = ({value, hook}) => {
     setShowPassword(!showPassword);
   };
 
+  // Ensure axios includes credentials with requests
+  axios.defaults.withCredentials = true;
+
   const data = {
     email: email,
     password: password,
@@ -33,10 +36,11 @@ const LoginForm = ({value, hook}) => {
   const handleLogin = async () => {
     try {
       const response = await axios.post("http://localhost:4005/auth/login", data);
+      //console.log(response.data.result);
       if (response.data.error) {
         alert(response.data.error);
       } else {
-        localStorage.setItem("accessToken", response.data);
+        sessionStorage.setItem("genToken", response.data.result.token);
         navigate("/dashboard");
       }
     } catch (error) {

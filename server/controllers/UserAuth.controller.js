@@ -77,15 +77,17 @@ const login = async (req, res, next) => {
       res
         .cookie("access_token", accessToken, {
           httpOnly: true, // Cookie cannot be accessed via client-side scripts
+          secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+          sameSite: 'strict', // CSRF protection
           maxAge: 24 * 60 * 60 * 1000, // Cookie expires in 24 hours (optional)
         })
         .status(200)
         .json({
-          result: restInfo,
+          result: restInfo,  //send response without password
           success: true,
           //token: accessToken // token already saved in cookie just for testing
 
-        }); //send response without password
+        }); 
     })
     .catch(err => {
       console.error(err);

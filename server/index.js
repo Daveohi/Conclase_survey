@@ -7,12 +7,13 @@ const cookieParser = require("cookie-parser");
 app.use(express.json()); // allows you write json objects to body
 app.use(express.urlencoded({ extended: false })); //
 app.use(cookieParser()); // allows you access cookies and its contents
-app.use(cors()); 
-// app.use(cors({
-//   origin: 'http://localhost:5173', // Allow requests from this origin
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only specified HTTP methods
-//   allowedHeaders: ['Content-Type', 'Authorization'],
-// }))
+//app.use(cors()); 
+app.use(cors({
+  origin: 'http://localhost:5173', // Allow requests from this origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only specified HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true // Allow credentials
+}))
 dotenv.config();
 
 const db = require("./models");

@@ -90,8 +90,8 @@ const RegisterForm =  ({ value, hook }) => {
       if(response.data.success === true){
         console.log(response.data.result);
         //save users data to session
-        sessionStorage.setItem('firstname', response.data.result.firstName); 
-        sessionStorage.setItem('lastname', response.data.result.lastName);
+        sessionStorage.setItem('firstname', response.data.result.firstname); 
+        sessionStorage.setItem('lastname', response.data.result.lastname);
         sessionStorage.setItem('phoneNumber', response.data.result.phoneNumber);
         sessionStorage.setItem('id', response.data.result.userId);
       }

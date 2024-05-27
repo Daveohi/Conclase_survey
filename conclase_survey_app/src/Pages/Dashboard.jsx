@@ -28,20 +28,33 @@ const DashBoard = () => {
     fetchUserName();
   }, []);
 
-  const id = sessionStorage.getItem("id");
+  axios.defaults.withCredentials = true;
 
   const fetchUserName = async () => {
     try {
-      // Send a request to the user profile API endpoint
+      // Retrieve the id from session storage
+      const id = sessionStorage.getItem("id");
+      
+      if (!id) {
+        throw new Error("User ID not found in session storage");
+      }
+
+      // Send a request to the user API endpoint
       const response = await axios.get(`http://localhost:4005/users/${id}`);
-      // Extract the user name from the response data
-      const { firstName, lastName } = response.data.result; // Corrected access to response data
-      // Update the userName state
-      setUserName(`${firstName} ${lastName}`);
+      console.log(response.data);
+
+      if (response.data.success === true ) {
+        const { firstname, lastname } = response.data.data;
+        // Update the userName state
+        setUserName(`${firstname} ${lastname}`);
+      } else {
+        throw new Error("Invalid response from server");
+      }
     } catch (error) {
       console.error("Error fetching user name:", error.message);
     }
   };
+
 
 
   return (
@@ -123,11 +136,11 @@ const DashBoard = () => {
         </div>
         <div className="box-6">
           <button className="wrapper-8">
-            <i class="bi bi-bar-chart" />
+            <i className="bi bi-bar-chart" />
             <span className="text-a">Dashboard</span>
           </button>
           <button className="section-b">
-            <i class="bi bi-chat-square-text" />
+            <i className="bi bi-chat-square-text" />
             <span className="text-b">Create survey</span>
           </button>
           <button className="wrapper-9">
