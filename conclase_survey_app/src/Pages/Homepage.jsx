@@ -127,7 +127,11 @@ const Homepage = () => {
             </div>
           </div>
           <div className="LOGIN-REGISTER">
-            <Link className="LOGIN" to="/login">
+            <Link
+              style={{ textDecoration: "none" }}
+              className="LOGIN"
+              to="/login"
+            >
               <button className="text-wrapper-4">Login</button>
             </Link>
             <Link className="REGISTER" to="/register">

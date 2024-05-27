@@ -10,7 +10,7 @@ const PasswordStrengthMeter = ({ value, hook }) => {
     setShowPassword(!showPassword);
   };
 
-  const handlePasswordChange = (e) => {
+  const handlePasswordChange = () => {
     hook(e.target.value);
   };
 
@@ -37,7 +37,7 @@ const PasswordStrengthMeter = ({ value, hook }) => {
 
     switch (strength) {
       case "strong":
-        return <FaMinus style={{ color: "green" }}  />;
+        return <FaMinus style={{ color: "green" }} />;
       case "medium":
         return <FaMinus style={{ color: "blue" }} />;
       case "weak":
@@ -48,21 +48,22 @@ const PasswordStrengthMeter = ({ value, hook }) => {
 
   return (
     <div>
-      {/* <label>Password:</label> */}
       <div className="password">
-        
-        {/* <div > */}
-          <input className="password-2"
-            placeholder="Enter Password"
-            type={showPassword ? "text" : "password"}
-            value={value}
-            onChange={handlePasswordChange}
-            
-          />
-          
-          <button className="toggle" type="button" onClick={togglePasswordVisibility}>
-            {showPassword ? <FaEye /> : <FaEyeSlash />}
-          </button>
+        <input
+          className="password-2"
+          placeholder="Enter Password"
+          type={showPassword ? "text" : "password"}
+          value={value}
+          onChange={handlePasswordChange}
+        />
+
+        <button
+          className="toggle"
+          type="button"
+          onClick={togglePasswordVisibility}
+        >
+          {showPassword ? <FaEye /> : <FaEyeSlash />}
+        </button>
       </div>
       <div>
         <p>Password Strength: {getPasswordStrengthText(value)}</p>

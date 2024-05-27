@@ -16,11 +16,33 @@ const RegisterForm =  ({ value, hook }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [termsAgreed, setTermsAgreed] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [userData, setUserData] = useState({});
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setUserData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Pass the user data to the parent component for storage
+  //   onSignup(userData);
+  //   // Reset the form or perform other actions
+  //   setUserData({});
+  // };
 
   const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+    // const { name, value } = e.target;
+    // setUserData((prevData) => ({
+    //   ...prevData,
+    //   [name]: value,
+    // }));
   };
 
   const handlePhoneNumberChange = (e) => {
@@ -31,12 +53,18 @@ const RegisterForm =  ({ value, hook }) => {
     setShowPassword(!showPassword);
   };
 
-  const handlePasswordChange = (e) => {
+  const handlePasswordChange = ({}) => {
     setPassword(e.target.value);
+    
   };
 
   const handleConfirmPasswordChange = (e) => {
     setConfirmPassword(e.target.value);
+    // const { name, value } = e.target;
+    // setUserData((prevData) => ({
+    //   ...prevData,
+    //   [name]: value,
+    // }));
   };
 
   const handleTermsAgreeChange = () => {
@@ -45,8 +73,8 @@ const RegisterForm =  ({ value, hook }) => {
 
   const handleRegistration = async () => {
     // Validate email, phone number, password, and termsAgreed
-    if (!email.endsWith("@conclase.com")) {
-      setErrorMessage('Email must end with "@conclase.com"');
+    if (!email.includes('conclase')) {
+      setErrorMessage('Email must have keyword "conclase"');
       return;
     }
 
@@ -102,6 +130,7 @@ const RegisterForm =  ({ value, hook }) => {
     }
   };
 
+
   return (
     <div>
       <div className="names">
@@ -130,8 +159,11 @@ const RegisterForm =  ({ value, hook }) => {
           className="email"
           placeholder="Email"
           type="email"
+          name="email"
           value={email}
           onChange={handleEmailChange}
+          // value={userData.email || ""}
+          // onChange={handleEmailChange}
         />
       </div>
       <br />
@@ -141,7 +173,7 @@ const RegisterForm =  ({ value, hook }) => {
           alt="Twemoji flag nigeria"
           src={Flag}
         />
-        <i className="bi bi-chevron-down arrow1"  />
+        <i className="bi bi-chevron-down arrow1" />
         <input
           className="phone-number-2"
           placeholder="Phone number"
@@ -149,12 +181,12 @@ const RegisterForm =  ({ value, hook }) => {
           value={phoneNumber}
           onChange={handlePhoneNumberChange}
         />
-      </div>
+      </div>      
       <br />
       <div className="frame-3">
+        
         <PasswordStrengthMeter value={password} hook={setPassword} />
         {/* Password strength meter can be integrated here */}
-        
 
         <div className="frame-7">
           <div className="frame-8">
@@ -189,8 +221,11 @@ const RegisterForm =  ({ value, hook }) => {
             className="confirm-password-2"
             placeholder="Confirm Password"
             type={showPassword ? "text" : "password"}
+            name="password"
             value={confirmPassword}
             onChange={handleConfirmPasswordChange}
+            // value={userData.confirmPassword || ""}
+            // onChange={handleConfirmPasswordChange}
           />
 
           <button
@@ -233,8 +268,12 @@ const RegisterForm =  ({ value, hook }) => {
           <div className="div-wrapper-2">
             <div className="text-wrapper-11">Already have an account?</div>
           </div>
-          <Link className="div-wrapper-2" to="/login">
-            <div className="text-wrapper-12">Log In</div>
+          <Link
+            style={{ textDecoration: "none" }}
+            className="div-wrapper-2"
+            to="/login"
+          >
+            <div className="text-wrapper-8">Log In</div>
           </Link>
         </div>
       </div>

@@ -1,0 +1,250 @@
+/* .rectangle8 {
+    position: absolute;
+    top: 817.3px;
+    left: 490px;
+    border: 8px solid var(--color-darkslateblue-400);
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-23deg);
+    transform-origin: 0 0;
+    opacity: 0.2;
+}
+
+.oval16 {
+    position: absolute;
+    top: 26.5px;
+    left: 1207.5px;
+    border-radius: 50%;
+    border: 21px solid var(--color-darkslateblue-200);
+    box-sizing: border-box;
+    width: 189px;
+    height: 186px;
+    opacity: 0.2;
+    mix-blend-mode: normal;
+}
+
+.oval17 {
+    position: absolute;
+    top: 744.5px;
+    left: -148.5px;
+    border-radius: 50%;
+    border: 21px solid var(--color-darkslateblue-300);
+    box-sizing: border-box;
+    width: 423px;
+    height: 416px;
+    opacity: 0.2;
+    mix-blend-mode: normal;
+} */
+
+.removebg-preview-1-icon4 {
+    position: absolute;
+    top: 37px;
+    left: 782px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.reset-password2 {
+    position: relative;
+    letter-spacing: 0.35px;
+    line-height: 36px;
+    font-weight: 600;
+}
+
+.create-acc9 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-8xs) var(--padding-3xs);
+}
+
+.please-reset-your2 {
+    position: relative;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+.lets-get-started4 {
+    width: 503px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-8xs) var(--padding-3xs);
+    box-sizing: border-box;
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-200);
+}
+
+.create-acc8 {
+    width: 507px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+}
+
+.new-password1 {
+    position: relative;
+    line-height: 21px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.password7 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    
+}
+
+.password6 {
+    width: 532px;
+    border-radius: var(--br-6xs);
+    border: 1px solid var(--color-gray-100);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-5xs) var(--padding-3xs);
+    font-size: var(--font-size-smi);
+    color: var(--color-darkslategray-400);
+}
+
+/* .confirm-password3 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    gap: var(--gap-370xl);
+} */
+
+/* .confirm-password2 {
+    width: 534px;
+    border-radius: var(--br-6xs);
+    border: 1px solid var(--color-gray-100);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-5xs) var(--padding-3xs);
+} */
+
+.your-new-password {
+    position: relative;
+    line-height: 12px;
+    font-weight: 500;
+}
+
+/* .your-new-password-and-new-conf-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    font-size: var(--font-size-xs);
+    color: var(--color-red-200);
+} */
+
+.confirm-password-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-darkslategray-100);
+}
+
+.create-my-account9 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+}
+
+.creat-my-account8 {
+    width: 419px;
+    background-color: var(--color-darkslateblue-100);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-5xs) var(--padding-3xs);
+    box-sizing: border-box;
+}
+
+.create-my-account8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    font-family: var(--font-anek-tamil);
+}
+
+.reset-new-password2 {
+    position: absolute;
+    top: 300px;
+    left: 633px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    gap: var(--gap-xl);
+    text-align: center;
+    font-size: var(--font-size-13xl);
+    color: var(--color-darkslateblue-100);
+}
+
+.arrow-back-icon4 {
+    position: absolute;
+    top: 21px;
+    left: 451px;
+    width: 29px;
+    height: 39px;
+    overflow: hidden;
+    color: #000000;
+}
+
+.rectangle9 {
+    position: absolute;
+    top: 639.2px;
+    left: 1165px;
+    border: 8px solid var(--color-darkslateblue-400);
+    box-sizing: border-box;
+    width: 266.8px;
+    height: 266.8px;
+    transform: rotate(-23deg);
+    transform-origin: 0 0;
+    opacity: 0.2;
+}
+
+.desktop-46 {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    height: 100vh;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-xl);
+    color: var(--color-gold);
+    font-family: var(--font-inter);
+}

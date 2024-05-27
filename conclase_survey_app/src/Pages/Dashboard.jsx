@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "../Styles/Dashboard/Dashboard.css";
-import Logo from "../assets/Image/Coclase logo.png";
+// import Logo from "../assets/Image/Coclase logo.png";
 import Empty from "../assets/Image/No Content.png";
 import { Link } from "react-router-dom";
 import axios from 'axios'
@@ -58,8 +58,8 @@ const DashBoard = () => {
 
 
   return (
-    <div className="main-container">
-      <div className="oval5" />
+    <div className="dash-container">
+      {/* <div className="oval5" /> */}
       <div className="box">
         <div className="section">
           <div className="box-2">
@@ -121,7 +121,11 @@ const DashBoard = () => {
               Looks like you don’t have any survey yet!!!
             </span>
             <button className="section-9">
-              <Link className="wrapper-7" to="/addfile">
+              <Link
+                style={{ textDecoration: "none" }}
+                className="wrapper-7"
+                to="/addfile"
+              >
                 <span className="text-9">Create New Survey</span>
               </Link>
             </button>

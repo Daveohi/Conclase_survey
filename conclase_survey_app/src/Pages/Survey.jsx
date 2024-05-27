@@ -4,7 +4,7 @@ import Logo from "../assets/Image/Coclase logo.png";
 
 const Surveys = () => {
   return (
-    <div className="main-container">
+    <div className="survey-container">
       <div className="oval6" />
       <div className="body">
         <div className="header">

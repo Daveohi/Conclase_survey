@@ -4,7 +4,7 @@ import "../Styles/Dashboard/FormTitle.css";
 
 const FormTitle = () => {
   return (
-    <div className="maincontainer">
+    <div className="formcontainer">
       <div className="bi bi-grip-vertical" />
       {/* <div className="border"> */}
       <div className="flex-row-bc">
