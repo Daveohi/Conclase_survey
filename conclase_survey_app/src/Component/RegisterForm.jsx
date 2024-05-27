@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PasswordStrengthMeter from "../Functions/Password";
 import Flag from "../assets/Image/flag-nigeria.png";
+import axios from "axios";
 
 
-const RegisterForm = ({ onSignup }) => {
+const RegisterForm =  ({ value, hook }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -32,6 +33,8 @@ const RegisterForm = ({ onSignup }) => {
   //   // Reset the form or perform other actions
   //   setUserData({});
   // };
+
+  const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -68,7 +71,7 @@ const RegisterForm = ({ onSignup }) => {
     setTermsAgreed(!termsAgreed);
   };
 
-  const handleRegistration = (e) => {
+  const handleRegistration = async () => {
     // Validate email, phone number, password, and termsAgreed
     if (!email.includes('conclase')) {
       setErrorMessage('Email must have keyword "conclase"');
@@ -95,25 +98,36 @@ const RegisterForm = ({ onSignup }) => {
       return;
     }
 
-    // Registration logic goes here (you can navigate to the dashboard or send data to the server)
-    // For simplicity, let's log the user details to the console
-    alert("Registration successful:", {
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      password,
-      confirmPassword,
-    });
+    const headers = {
+      'Content-Type': 'application/json',
+    };
 
-    // Optionally, navigate to the dashboard
-    window.location.href = "/dashboard"; // Change this based on your routing mechanism
+    const data = {
+      firstname: firstName,
+      lastname: lastName,
+      email: email,
+      phoneNumber: phoneNumber,
+      password: password,
+      confirmPassword: confirmPassword 
+    };
 
-    e.preventDefault();
-    // Pass the user data to the parent component for storage
-    onSignup(userData);
-    // Reset the form or perform other actions
-    setUserData({});
+    try {
+      const response = await axios.post("http://localhost:4005/auth/register", JSON.stringify(data), {headers});
+      //console.log(response);
+      console.log("Registration successful:", response.data.result);
+      if(response.data.success === true){
+        console.log(response.data.result);
+        //save users data to session
+        sessionStorage.setItem('firstname', response.data.result.firstname); 
+        sessionStorage.setItem('lastname', response.data.result.lastname);
+        sessionStorage.setItem('phoneNumber', response.data.result.phoneNumber);
+        sessionStorage.setItem('id', response.data.result.userId);
+      }
+      navigate('/login'); // Navigate to login after successful registration
+    } catch (error) {
+      console.error("Error registering user:", error.message);
+      setErrorMessage("Error registering user. Please try again later.");
+    }
   };
 
 

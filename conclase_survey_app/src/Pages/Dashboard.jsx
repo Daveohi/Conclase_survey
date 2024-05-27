@@ -1,11 +1,62 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "../Styles/Dashboard/Dashboard.css";
 // import Logo from "../assets/Image/Coclase logo.png";
 import Empty from "../assets/Image/No Content.png";
 import { Link } from "react-router-dom";
-import DashSidebar from "../Component/DashSidebar";
+import axios from 'axios'
 
 const DashBoard = () => {
+
+   //logout
+   const logout = async () => {
+    try {
+      // Send a request to the logout API endpoint
+      await axios.post("http://localhost:4005/auth/logout", { userId: sessionStorage.getItem('id') });
+      // Clear session storage
+      sessionStorage.clear();
+      // Redirect to the login page
+      window.location.href = "/login";
+    } catch (error) {
+      console.error("Error logging out:", error.message);
+    }
+  };
+
+//set username dynamically
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    fetchUserName();
+  }, []);
+
+  axios.defaults.withCredentials = true;
+
+  const fetchUserName = async () => {
+    try {
+      // Retrieve the id from session storage
+      const id = sessionStorage.getItem("id");
+      
+      if (!id) {
+        throw new Error("User ID not found in session storage");
+      }
+
+      // Send a request to the user API endpoint
+      const response = await axios.get(`http://localhost:4005/users/${id}`);
+      console.log(response.data);
+
+      if (response.data.success === true ) {
+        const { firstname, lastname } = response.data.data;
+        // Update the userName state
+        setUserName(`${firstname} ${lastname}`);
+      } else {
+        throw new Error("Invalid response from server");
+      }
+    } catch (error) {
+      console.error("Error fetching user name:", error.message);
+    }
+  };
+
+
+
   return (
     <div className="dash-container">
       {/* <div className="oval5" /> */}
@@ -13,7 +64,7 @@ const DashBoard = () => {
         <div className="section">
           <div className="box-2">
             <div className="wrapper">
-              <span className="text">Welcome, John</span>
+              <span className="text">Welcome, {userName}</span>
               <span className="text-2">
                 To begin please create a new survey
               </span>
@@ -83,7 +134,39 @@ const DashBoard = () => {
         <div className="pic-7" />
       </div>
 
-      <DashSidebar />
+      <div className="section-a">
+        <div className="box-5">
+          <img className="img-3" alt="Image" src={Logo} />
+        </div>
+        <div className="box-6">
+          <button className="wrapper-8">
+            <i className="bi bi-bar-chart" />
+            <span className="text-a">Dashboard</span>
+          </button>
+          <button className="section-b">
+            <i className="bi bi-chat-square-text" />
+            <span className="text-b">Create survey</span>
+          </button>
+          <button className="wrapper-9">
+            <i className="bi bi-chat-dots" />
+            <span className="text-c">Responses</span>
+          </button>
+          <button className="group-5">
+            <i className="bi bi-gear" />
+            <span className="text-d">Settings</span>
+          </button>
+          <button className="wrapper-a" onClick={logout}>
+            <i className="bi bi-box-arrow-right" />
+            <span className="text-e">Logout</span>
+          </button>
+        </div>
+        <div className="wrapper-b">
+          <div className="bi bi-caret-left" />
+        </div>
+      </div>
+      <div className="oval-3" />
+      <div className="oval-4" />
+      <div className="img-9" />
     </div>
   );
 }
