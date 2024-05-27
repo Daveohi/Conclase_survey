@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash, FaMinus } from "react-icons/fa";
 
 const PasswordStrengthMeter = ({ value, hook }) => {
   const [showPassword, setShowPassword] = useState(false);
+  
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -13,9 +14,8 @@ const PasswordStrengthMeter = ({ value, hook }) => {
     hook(e.target.value);
   };
 
-  const calculatePasswordStrength = () => {
-    // Implement your password strength logic here
-    // Example: Check if the password meets specific criteria
+  const calculatePasswordStrength = (value) => {
+    
     const hasUpperCase = /[A-Z]/.test(value);
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
     const hasMinLength = value.length >= 8;
@@ -32,8 +32,8 @@ const PasswordStrengthMeter = ({ value, hook }) => {
     }
   };
 
-  const getPasswordStrengthText = () => {
-    const strength = calculatePasswordStrength();
+  const getPasswordStrengthText = (value) => {
+    const strength = calculatePasswordStrength(value);
 
     switch (strength) {
       case "strong":
@@ -66,7 +66,8 @@ const PasswordStrengthMeter = ({ value, hook }) => {
         </button>
       </div>
       <div>
-        <p>Password Strength: {getPasswordStrengthText()}</p>
+        <p>Password Strength: {getPasswordStrengthText(value)}</p>
+        
       </div>
     </div>
   );
