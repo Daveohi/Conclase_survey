@@ -339,7 +339,7 @@ button {
     line-height: 22px;
     text-align: center;
     white-space: nowrap;
-    z-index: 8;
+    z-index: 1;
 }
 
 .sidebars {
