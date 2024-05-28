@@ -8,6 +8,7 @@ import Calendar from "../Component/Calendar";
 import "../Styles/Dashboard/Addfile.css";
 import DashSidebar from "../Component/DashSidebar";
 import PublishFormModal from "../Component/PublishFormModal";
+import { BsToggle } from "react-icons/bs";
 
 const Addfile = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -90,7 +91,7 @@ const Addfile = () => {
                 <div className="bi bi-toggle-off toggle-button " />
               </div>
               <div className="toggle-state-icon">
-                <option className="fix-deadline">Fix deadline</option>
+                <option className="fix-deadline1">Fix deadline</option>
               </div>
               <div className="hover-state-0">
                 <option className="delete-survey">Delete survey</option>

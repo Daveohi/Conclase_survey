@@ -617,11 +617,13 @@ button {
     z-index: 46;
 }
 
-.active {
-    background: #052a76;
-        border-right: 3px solid #ffffff;
-        z-index: 47;
-        border: 1px solid;
+.box-6 button {
+    background-color: #052a76;
+}
+
+.box-6 button.active {
+    z-index: 47;
+    /* border: 1px solid; */
 }
 
 .wrapper-8 {
@@ -629,18 +631,18 @@ button {
     align-items: center;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    gap: 20px;
+    gap: 10px;
     position: relative;
     width: 193px;
     padding: 10px 10px 10px 10px;
-    
+
 }
 
 .bi-bar-chart {
     flex-shrink: 0;
     position: relative;
     width: 24px;
-    height: 15px;
+    height: 20px;
     background-size: cover;
     z-index: 4;
     overflow: hidden;
@@ -691,7 +693,7 @@ button {
     flex-shrink: 0;
     position: relative;
     width: 24px;
-    height: 15px;
+    height: 20px;
     /* background: url(../assets/images/e924419a-dbfc-4c2e-9484-0548c3fab2fa.png) no-repeat center; */
     background-size: cover;
     z-index: 7;
@@ -741,7 +743,7 @@ button {
     flex-shrink: 0;
     position: relative;
     width: 24px;
-    height: 15px;
+    height: 20px;
     /* background: url(../assets/images/41f60842-98e7-4b56-ad10-653038492525.png) no-repeat center; */
     background-size: cover;
     z-index: 10;
@@ -791,14 +793,14 @@ button {
     flex-shrink: 0;
     position: relative;
     width: 24px;
-    height: 15px;
+    height: 20px;
     /* background: url(../assets/images/5055f395-58dd-4095-a60e-b6e46d4b577d.png) no-repeat center; */
     background-size: cover;
     z-index: 13;
     color: #ffffff;
 }
 
-.img-7 {
+/* .img-7 {
     flex-shrink: 0;
     position: relative;
     width: 24px;
@@ -806,7 +808,7 @@ button {
     background: url(../assets/images/0532a02b-cc64-46d3-aacd-906b3965c24a.png) no-repeat center;
     background-size: cover;
     z-index: 57;
-}
+} */
 
 .text-d {
     flex-shrink: 0;
@@ -841,7 +843,7 @@ button {
     flex-shrink: 0;
     position: relative;
     width: 24px;
-    height: 15px;
+    height: 20px;
     /* background: #214aa0; */
     background-size: cover;
     z-index: 16;

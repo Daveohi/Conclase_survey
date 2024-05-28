@@ -1,15 +1,24 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "../Styles/Dashboard/Dashboard.css";
 import Logo from "../assets/Image/Coclase logo.png";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const DashSidebar = () => {
+  const [activeButton, setActiveButton] = useState(""); // Initialize with an empty string or a default button name
+
+  // Function to handle button click
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+  };
 
   //logout
   const logout = async () => {
     try {
       // Send a request to the logout API endpoint
-      await axios.post("http://localhost:4005/auth/logout", { userId: sessionStorage.getItem('id') });
+      await axios.post("http://localhost:4005/auth/logout", {
+        userId: sessionStorage.getItem("id"),
+      });
       // Clear session storage
       sessionStorage.clear();
       // Redirect to the login page
@@ -18,7 +27,6 @@ const DashSidebar = () => {
       console.error("Error logging out:", error.message);
     }
   };
-  
 
   return (
     <div className="sidebar-container">
@@ -31,7 +39,7 @@ const DashSidebar = () => {
         <div className="box-6">
           <button
             className={`wrapper-8 ${
-              activeButton === "dashboard" ? "active" : "section-b"
+              activeButton === "dashboard" ? "active" : " "
             }`}
             onClick={() => handleButtonClick("dashboard")}
           >
@@ -46,7 +54,7 @@ const DashSidebar = () => {
           </button>
           <button
             className={`wrapper-8 ${
-              activeButton === "createSurvey" ? "active" : " wrapper-9"
+              activeButton === "createSurvey" ? "active" : " "
             }`}
             onClick={() => handleButtonClick("createSurvey")}
           >
@@ -84,32 +92,7 @@ const DashSidebar = () => {
 
       <div className="oval-3" />
       <div className="oval-4" />
-      <div className="section">
-        {/* <div className="pic" /> */}
-      </div>
-      <div className="section-2">
-        <button className="section-3">
-          <i className="bi bi-bar-chart" />
-          <span className="text">Dashboard</span>
-        </button>
-        <button className="group-2">
-          <i className="bi bi-chat-square-text" />
-          {/* <FaInbox /> */}
-          <span className="text-2">Create survey</span>
-        </button>
-        <button className="section-4">
-          <i className="bi bi-chat-dots" />
-          <span className="text-3">Responses</span>
-        </button>
-        <button className="box">
-          <i className="bi bi-gear" />
-          <span className="text-4">Settings</span>
-        </button>
-        <button className="section-5" onClick={logout}>
-          <i className="bi bi-box-arrow-right" />
-          <span className="text-5">Logout</span>
-        </button>
-      </div>
+      <div className="section">{/* <div className="pic" /> */}</div>
     </div>
   );
 };
