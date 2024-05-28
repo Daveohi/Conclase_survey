@@ -1,12 +1,12 @@
-@font-face {
-  font-family: Inter;
-  src: url("./assets/fonts/Inter.ttf");
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 
+
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/Inter.ttf");
+}
 
 * {
   margin: 0;
