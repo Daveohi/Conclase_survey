@@ -1,5 +1,5 @@
 import React from "react";
-// import { useEffect } from "react";
+import { useState } from "react";
 import {
   BrowserRouter,
   Route,
@@ -17,15 +17,11 @@ import DashBoard from './Pages/Dashboard';
 import Desktop1 from './Pages/Desktop1';
 
 function App() {
-  // const action = useNavigationType();
-  // const location = useLocation();
-  // const pathname = location.pathname;
+  const [formData, setFormData] = useState({ question: "", inputType: "" });
 
-  // useEffect(() => {
-  //   if (action !== "POP") {
-  //     window.scrollTo(0, 0);
-  //   }
-  // }, [action, pathname]);
+  const handleFormSubmit = (data) => {
+    setFormData(data);
+  };
 
   return (
     <BrowserRouter>
@@ -35,8 +31,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/desktop1" element={<Desktop1 />} />
         <Route path="dashboard" element={<DashBoard />} />
-        <Route path="/addfile" element={<Addfile />} />
-        <Route path="/formpage" element={<FormPage />} />
+        <Route path="/addfile" element={<Addfile onFormSubmit={handleFormSubmit} />} />
+        <Route path="/formpage" element={<FormPage formData={formData} />} />
         <Route path="/createsurvey" element={<CREATESURVEY />} />
       </Routes>
     </BrowserRouter>

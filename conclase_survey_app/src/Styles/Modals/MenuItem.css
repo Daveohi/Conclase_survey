@@ -32,6 +32,7 @@ button {
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0 2px 10px 0 rgba(33, 74, 160, 0.25);
+    cursor: pointer;
 }
 
 .hover-state-toggle {
@@ -69,7 +70,8 @@ button {
     width: 32px;
     height: 16px;
     z-index: 8;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
 } 
 
 .toggle-state-icon {
@@ -86,13 +88,15 @@ button {
     border-radius: 6px;
 }
 
-.fix-deadline1 {
+.fix-deadline {
     flex-shrink: 0;
     flex-basis: auto;
     position: relative;
     height: 21px;
+    color: #000000;
     font-family: Inter, var(--default-font-family);
     font-size: 16px;
+    font-weight: 400;
     line-height: 21px;
     text-align: left;
     white-space: nowrap;

@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
 import "../Styles/Dashboard/Dashboard.css";
-// import Logo from "../assets/Image/Coclase logo.png";
+import Logo from "../assets/Image/Coclase logo.png";
 import Empty from "../assets/Image/No Content.png";
 import { Link } from "react-router-dom";
+import DashSidebar from "../Component/DashSidebar";
 import axios from 'axios'
 
 const DashBoard = () => {
@@ -138,28 +139,8 @@ const DashBoard = () => {
         <div className="box-5">
           <img className="img-3" alt="Image" src={Logo} />
         </div>
-        <div className="box-6">
-          <button className="wrapper-8">
-            <i className="bi bi-bar-chart" />
-            <span className="text-a">Dashboard</span>
-          </button>
-          <button className="section-b">
-            <i className="bi bi-chat-square-text" />
-            <span className="text-b">Create survey</span>
-          </button>
-          <button className="wrapper-9">
-            <i className="bi bi-chat-dots" />
-            <span className="text-c">Responses</span>
-          </button>
-          <button className="group-5">
-            <i className="bi bi-gear" />
-            <span className="text-d">Settings</span>
-          </button>
-          <button className="wrapper-a" onClick={logout}>
-            <i className="bi bi-box-arrow-right" />
-            <span className="text-e">Logout</span>
-          </button>
-        </div>
+        
+        <DashSidebar />
         <div className="wrapper-b">
           <div className="bi bi-caret-left" />
         </div>
