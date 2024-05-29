@@ -112,7 +112,7 @@ const RegisterForm =  ({ value, hook }) => {
     };
 
     try {
-      const response = await axios.post("http://localhost:4005/auth/register", JSON.stringify(data), {headers});
+      const response = await axios.post("https://conclase-app-api.onrender.com/auth/register", JSON.stringify(data), {headers});
       //console.log(response);
       console.log("Registration successful:", response.data.result);
       if(response.data.success === true){

@@ -12,7 +12,7 @@ const DashBoard = () => {
    const logout = async () => {
     try {
       // Send a request to the logout API endpoint
-      await axios.post("http://localhost:4005/auth/logout", { userId: sessionStorage.getItem('id') });
+      await axios.post("https://conclase-app-api.onrender.com/auth/logout", { userId: sessionStorage.getItem('id') });
       // Clear session storage
       sessionStorage.clear();
       // Redirect to the login page
@@ -41,7 +41,7 @@ const DashBoard = () => {
       }
 
       // Send a request to the user API endpoint
-      const response = await axios.get(`http://localhost:4005/users/${id}`);
+      const response = await axios.get(`https://conclase-app-api.onrender.com/users/${id}`);
       console.log(response.data);
 
       if (response.data.success === true ) {
