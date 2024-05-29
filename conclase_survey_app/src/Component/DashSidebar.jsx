@@ -1,33 +1,15 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "../Styles/Dashboard/Dashboard.css";
 import Logo from "../assets/Image/Coclase logo.png";
 import { Link } from "react-router-dom";
-import axios from "axios";
+
 
 const DashSidebar = () => {
-  const [activeButton, setActiveButton] = useState(""); // Initialize with an empty string or a default button name
+  const [activeButton, setActiveButton] = useState("dashboard");
 
-  // Function to handle button click
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
-
-  //logout
-  const logout = async () => {
-    try {
-      // Send a request to the logout API endpoint
-      await axios.post("http://localhost:4005/auth/logout", {
-        userId: sessionStorage.getItem("id"),
-      });
-      // Clear session storage
-      sessionStorage.clear();
-      // Redirect to the login page
-      window.location.href = "/login";
-    } catch (error) {
-      console.error("Error logging out:", error.message);
-    }
-  };
-
   return (
     <div className="sidebar-container">
       <div className="group"></div>
@@ -69,18 +51,28 @@ const DashSidebar = () => {
           </button>
           <button
             className={`wrapper-8 ${
-              activeButton === "responses" ? "active" : " wrapper-a"
+              activeButton === "responses" ? "active" : " "
             }`}
             onClick={() => handleButtonClick("responses")}
           >
             <i className="bi bi-chat-dots" />
             <span className="text-c">Responses</span>
           </button>
-          <button className="group-5">
+          <button
+            className={`wrapper-8 ${
+              activeButton === "settings" ? "active" : " "
+            }`}
+            onClick={() => handleButtonClick("settings")}
+          >
             <i className="bi bi-gear" />
             <span className="text-d">Settings</span>
           </button>
-          <button className="wrapper-a">
+          <button
+            className={`wrapper-8 ${
+              activeButton === "logout" ? "active" : " "
+            }`}
+            onClick={() => handleButtonClick("logout")}
+          >
             <i className="bi bi-box-arrow-right" />
             <span className="text-e">Logout</span>
           </button>
@@ -92,7 +84,7 @@ const DashSidebar = () => {
 
       <div className="oval-3" />
       <div className="oval-4" />
-      <div className="section">{/* <div className="pic" /> */}</div>
+      <div className="section"></div>
     </div>
   );
 };

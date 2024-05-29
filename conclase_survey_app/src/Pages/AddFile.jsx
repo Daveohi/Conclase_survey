@@ -1,34 +1,49 @@
 import React, { useState } from "react";
 
-import "../Styles/Dashboard/MenuItem.css";
+import "../Styles/Modals/MenuItem.css";
 import Addfilebutton from "../Functions/Addfilebutton";
-import Logo from "../assets/Image/Coclase logo.png";
+// import Logo from "../assets/Image/Coclase logo.png";
 import FixDeadline from "../Component/FixDeadline";
 import { Link } from "react-router-dom";
-// import FixDate from "../Component/FixDate";
-import "../Styles/Dashboard/Addfile.css";
+import FixDate from "../Component/FixDate";
+import "../Styles/Dashboard/AddFile.css";
 import DashSidebar from "../Component/DashSidebar";
 import PublishFormModal from "../Component/PublishFormModal";
+import Calendar from "../Component/Calendar";
+
 
 const Addfile = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [modalVisible, setModalVisible] = useState(false);
-  // const [secondModal, setSecondModal] = useState(false);
+  const [modalVisible, setModalVisible] = useState(0);
+  
 
   const handleDropdownToggle = () => {
     setDropdownVisible(!dropdownVisible); // Toggle the visibility of the dropdown
   };
 
   const handlePublishClick = () => {
-    setModalVisible(true); // Show the modal when "Publish" button is clicked
+    // setModalVisible(true); // Show the modal when "Publish" button is clicked
+    setModalVisible(1); // Start the modal sequence
   };
   const handleCloseModal = () => {
-    setModalVisible(false);
+    // setModalVisible(false);
+    setModalVisible(modalVisible + 1); // Move to the next modal in sequence
   };
 
-  // const handleFixDateClick = () => {
-  //   // setSecondModal(false);
-  // };
+  const renderModal = () => {
+    switch (modalVisible) { 
+      case 1:
+        return <FixDeadline onClick={handleCloseModal} onClickFix={handleCloseModal} />;
+      case 2:
+        return <FixDate onClose={handleCloseModal} />;
+      case 3:
+        return <Calendar onClose={handleCloseModal} />;
+      case 4:
+        return <PublishFormModal onClose={handleCloseModal} />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className="file-container">
@@ -49,7 +64,7 @@ const Addfile = () => {
           <button className="filelogin" onClick={handlePublishClick}>
             <span className="publish">Publish</span>
           </button>
-          {modalVisible && <FixDeadline onClose={handleCloseModal} />}
+          { renderModal()}
 
           <Link
             style={{ textDecoration: "none" }}
@@ -73,7 +88,7 @@ const Addfile = () => {
                 <div className="bi bi-toggle-off toggle-button " />
               </div>
               <div className="toggle-state-icon">
-                <option className="fix-deadline1">Fix deadline</option>
+                <option className="fix-deadline">Fix deadline</option>
               </div>
               <div className="hover-state-0">
                 <option className="delete-survey">Delete survey</option>
