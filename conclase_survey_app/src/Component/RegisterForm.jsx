@@ -53,10 +53,10 @@ const RegisterForm =  ({ value, hook }) => {
     setShowPassword(!showPassword);
   };
 
-  const handlePasswordChange = ({}) => {
-    setPassword(e.target.value);
+  // const handlePasswordChange = (e) => {
+  //   setPassword(e.target.value);
     
-  };
+  // };
 
   const handleConfirmPasswordChange = (e) => {
     setConfirmPassword(e.target.value);
@@ -233,7 +233,7 @@ const RegisterForm =  ({ value, hook }) => {
             type="button"
             onClick={togglePasswordVisibility}
           >
-            {showPassword ? <FaEye /> : <FaEyeSlash />}
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
           </button>
         </div>
       </div>

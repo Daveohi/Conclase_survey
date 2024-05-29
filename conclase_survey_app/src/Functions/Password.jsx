@@ -10,7 +10,7 @@ const PasswordStrengthMeter = ({ value, hook }) => {
     setShowPassword(!showPassword);
   };
 
-  const handlePasswordChange = () => {
+  const handlePasswordChange = (e) => {
     hook(e.target.value);
   };
 
@@ -62,7 +62,7 @@ const PasswordStrengthMeter = ({ value, hook }) => {
           type="button"
           onClick={togglePasswordVisibility}
         >
-          {showPassword ? <FaEye /> : <FaEyeSlash />}
+          {showPassword ? <FaEyeSlash /> : <FaEye />}
         </button>
       </div>
       <div>

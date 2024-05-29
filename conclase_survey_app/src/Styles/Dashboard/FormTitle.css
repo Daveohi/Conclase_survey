@@ -125,7 +125,6 @@ select
     height: 1px;
     margin: 28px 0 0 66.876px;
     border-top: 1px solid rgba(210, 210, 210, 0.7);
-    /* background: url(../assets/images/83172d3f-8757-41f0-9ac1-3cf6a2d7626c.png) no-repeat center; */
     background-size: cover;
     z-index: 24;
 }
@@ -151,11 +150,10 @@ select
 .add {
     position: absolute;
     width: 34px;
-    height: 34px;
+    height: 44px;
     top: 14px;
     left: 0;
     font-size: 40px;
-    /* font-weight: bolder; */
     z-index: 28;
     overflow: hidden;
 }
@@ -163,7 +161,7 @@ select
 .bi-trash3 {
     position: absolute;
     width: 34px;
-    height: 34px;
+    height: 44px;
     top: 19px;
     left: 60px;
     z-index: 19;
@@ -208,4 +206,5 @@ select
     height: 16px;
     font-size: 25px;
     z-index: 27;
+    margin: 5px auto;
 }

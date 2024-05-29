@@ -2,7 +2,6 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
-    /* grid-template-columns: 25% auto; */
     justify-content: left;
     width: 100%;
 }
@@ -404,8 +403,9 @@
     border: none;
     background: #ffffff;
     /* font-size: 20px; */
-    width: 13.62px;
-    height: 12.04px;
+    width: 25px;
+    height: 25px;
+    outline: none;
 }
 
 .desktop1 .img {
@@ -486,21 +486,6 @@
     padding: 10px;
     position: relative;
 }
-
-/* .desktop1 .text-wrapper-6 {
-    color: #214aa0;
-    font-family: "Anek Tamil-SemiBold", Helvetica;
-    font-size: 14px;
-    font-weight: 600;
-    height: 17px;
-    letter-spacing: 0;
-    line-height: 21px;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: 125px;
-} */
 
 .desktop1 .create-my-account {
     align-items: center;
