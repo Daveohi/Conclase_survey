@@ -1,32 +1,28 @@
 ﻿
 # Conclase survey Backend API
 
-Agriswift is a technological solution aimed at reducing food loss and wastage by empowering farmers and consumers through efficient food distribution and access.
+# Introduction
 
-## Introduction
-
-
-
-## Features
+# Features
 
 
-## Deployment
+# Deployment
 
 This project is deployed on [Render](https://render.com/). You can access the deployed server at [https://conclase-app-api.onrender.com](https://conclase-app-api.onrender.com).
 
-## Dependencies
+# Dependencies
 
 This project uses Node.js, Express, JWT, Bcrypt, Cookie-parser, Nodemailer and Sequelize ORM
 
-## Usage
+# Usage
 
-## clientside testing tool 
+# clientside testing tool 
 
 - Postman
 - Thunder Client
 
 
-## Routes [https://conclase-app-api.onrender.com](https://conclase-app-api.onrender.com).
+# Routes [https://conclase-app-api.onrender.com](https://conclase-app-api.onrender.com).
 
 
 The server exposes the following routes:
