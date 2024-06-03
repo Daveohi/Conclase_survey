@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false })); //
 app.use(cookieParser()); // allows you access cookies and its contents
 //app.use(cors()); 
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from this origin
+  origin: 'http://localhost:5174', // Allow requests from this origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only specified HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true // Allow credentials
@@ -21,12 +21,35 @@ const db = require("./models");
 //routers
 const authRouter = require("./routes/UserAuth.route")
 const userRouter = require("./routes/User.route")
+const surveyRouter = require("./routes/Survey.route")
+const questionRouter = require("./routes/Question.route")
+const optionRouter = require("./routes/Option.route")
+const responseRouter = require("./routes/Response.route")
+const answerRouter = require("./routes/Answer.route")
 
 
 
 //endpoint routes
 app.use("/auth", authRouter)
 app.use("/users", userRouter)
+app.use("/survey", surveyRouter)
+app.use("/questions", questionRouter)
+app.use("/option", optionRouter)
+app.use("/response", responseRouter)
+app.use("/answer", answerRouter)
+
+
+// app.use((req, res, next) => {
+//   if (req.url.endsWith('.js')) {
+//     res.type('application/javascript');
+//   }
+//   next();
+// });
+
+// app.use((req, res, next) => {
+//   console.log(`Incoming request: ${req.method} ${req.url}`);
+//   next();
+// });
 
 
 //middleware to handle errors

@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import "../Styles/Dashboard/Dashboard.css";
 import Logo from "../assets/Image/Coclase logo.png";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
 
 const DashSidebar = () => {
@@ -9,7 +10,27 @@ const DashSidebar = () => {
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
+    if (buttonName === "logout") {
+      logout();  // Call logout function when logout button is clicked
+    }
+
   };
+
+
+  //logout
+  const logout = async () => {
+    try {
+      // Send a request to the logout API endpoint
+      await axios.post("https://conclase-app-api.onrender.com/auth/logout", { userId: sessionStorage.getItem('id') });
+      // Clear session storage
+      sessionStorage.clear();
+      // Redirect to the login page
+      window.location.href = "/login";
+    } catch (error) {
+      console.error("Error logging out:", error.message);
+    }
+  };
+
   return (
     <div className="sidebar-container">
       <div className="group"></div>

@@ -8,19 +8,19 @@ import axios from 'axios'
 
 const DashBoard = () => {
 
-   //logout
-   const logout = async () => {
-    try {
-      // Send a request to the logout API endpoint
-      await axios.post("https://conclase-app-api.onrender.com/auth/logout", { userId: sessionStorage.getItem('id') });
-      // Clear session storage
-      sessionStorage.clear();
-      // Redirect to the login page
-      window.location.href = "/login";
-    } catch (error) {
-      console.error("Error logging out:", error.message);
-    }
-  };
+  //  //logout
+  //  const logout = async () => {
+  //   try {
+  //     // Send a request to the logout API endpoint
+  //     await axios.post("https://conclase-app-api.onrender.com/auth/logout", { userId: sessionStorage.getItem('id') });
+  //     // Clear session storage
+  //     sessionStorage.clear();
+  //     // Redirect to the login page
+  //     window.location.href = "/login";
+  //   } catch (error) {
+  //     console.error("Error logging out:", error.message);
+  //   }
+  // };
 
 //set username dynamically
   const [userName, setUserName] = useState("");
@@ -42,7 +42,7 @@ const DashBoard = () => {
 
       // Send a request to the user API endpoint
       const response = await axios.get(`https://conclase-app-api.onrender.com/users/${id}`);
-      console.log(response.data);
+      console.log(response.data.data);
 
       if (response.data.success === true ) {
         const { firstname, lastname } = response.data.data;

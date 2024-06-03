@@ -53,10 +53,10 @@ const RegisterForm =  ({ value, hook }) => {
     setShowPassword(!showPassword);
   };
 
-  const handlePasswordChange = ({}) => {
-    setPassword(e.target.value);
+  // const handlePasswordChange = ({}) => {
+  //   setPassword(e.target.value);
     
-  };
+  // };
 
   const handleConfirmPasswordChange = (e) => {
     setConfirmPassword(e.target.value);
@@ -139,6 +139,7 @@ const RegisterForm =  ({ value, hook }) => {
             className="input"
             placeholder="First Name"
             type="text"
+            name="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
@@ -148,6 +149,7 @@ const RegisterForm =  ({ value, hook }) => {
             className="input"
             placeholder="Last Name"
             type="text"
+            name="lastName"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
@@ -178,6 +180,7 @@ const RegisterForm =  ({ value, hook }) => {
           className="phone-number-2"
           placeholder="Phone number"
           type="tel"
+          name="phoneNumber"
           value={phoneNumber}
           onChange={handlePhoneNumberChange}
         />
@@ -221,7 +224,8 @@ const RegisterForm =  ({ value, hook }) => {
             className="confirm-password-2"
             placeholder="Confirm Password"
             type={showPassword ? "text" : "password"}
-            name="password"
+            //name="password"
+            name="confirmPassword"
             value={confirmPassword}
             onChange={handleConfirmPasswordChange}
             // value={userData.confirmPassword || ""}

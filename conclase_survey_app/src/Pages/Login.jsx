@@ -4,12 +4,14 @@ import "../Styles/Login/LoginForm.css";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   const handleEmailChange = (event) => {
@@ -24,7 +26,8 @@ const Login = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleLogin = () => {
+
+  const handleLogin = async () => {
     const errors = {};
     // Email validation
     if (!email.trim()) {
@@ -40,14 +43,35 @@ const Login = () => {
     }
     // Display errors if any
     setErrors(errors);
-    // If there are no errors, proceed with registration
+
     if (Object.keys(errors).length === 0) {
-      // Perform registration logic here
-      // console.log("Login successful");
-      navigate("/dashboard");
+      // If there are no errors, proceed with login
+      // Ensure axios includes credentials with requests
+      axios.defaults.withCredentials = true;
+
+      const data = {
+        email: email,
+        password: password,
+      };
+
+      try {
+        const response = await axios.post("https://conclase-app-api.onrender.com/auth/login", data);
+        console.log(response.data.result);
+        console.log(response.data.error);
+        if (response.data.error) {
+          alert(response.data.error);
+        } else {
+          sessionStorage.setItem("genToken", response.data.result.token);
+          navigate("/dashboard");
+        }
+      } catch (error) {
+        console.error("Error logging in:", error.message);
+        setErrorMessage("user not found");
+      }
     }
-    
   };
+
+  
   return (
     <div className="desktop-50">
       <SideNav />
@@ -125,9 +149,11 @@ const Login = () => {
             </Link>
           </div>
         </div>
+        {errorMessage && <div className="error" style={{ "color": "red","marginTop": "10px"}}>{errorMessage}</div>}
       </div>
     </div>
   );
 };
 
 export default Login;
+
